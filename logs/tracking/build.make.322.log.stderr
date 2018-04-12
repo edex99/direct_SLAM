@@ -1,0 +1,29 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘void updateFilter(Eigen::Matrix<float, 4, -1>&, Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:71:55: error: ‘max’ was not declared in this scope
+   float z_min = max(0, filter(2,i) - sqrt(filter(3,i)));
+                                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:71:55: note: suggested alternatives:
+In file included from /usr/include/c++/4.8/algorithm:62:0,
+                 from /usr/local/include/opencv2/hal/defs.h:570,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/c++/4.8/bits/stl_algo.h:4236:5: note:   ‘std::max’
+     max(initializer_list<_Tp> __l, _Compare __comp)
+     ^
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/local/include/opencv2/core.hpp:1332:17: note:   ‘cv::max’
+ CV_EXPORTS void max(const UMat& src1, const UMat& src2, UMat& dst);
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:78:9: warning: unused variable ‘gaussian_scale’ [-Wunused-variable]
+   float gaussian_scale = sqrt(tau2+filter(3,i));
+         ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

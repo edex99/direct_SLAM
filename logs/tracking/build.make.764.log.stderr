@@ -1,0 +1,20 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:14:86: error: ‘curr_depth’ has not been declared
+  Eigen::Matrix<float,2,Eigen::Dynamic> p1, Eigen::Matrix<float,2,Eigen::Dynamic> p2, curr_depth) {
+                                                                                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:13:39: error: prototype for ‘Eigen::Matrix<float, 3, -1> DepthFilter::triangulatePoints(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>, int)’ does not match any in class ‘DepthFilter’
+ Eigen::Matrix<float,3,Eigen::Dynamic> DepthFilter::triangulatePoints(Eigen::Matrix4f T1, Eigen::Matrix4f T2, 
+                                       ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:36:40: error: candidate is: Eigen::Matrix<float, 3, -1> DepthFilter::triangulatePoints(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>)
+  Eigen::Matrix<float,3,Eigen::Dynamic> triangulatePoints(Eigen::Matrix4f T1, Eigen::Matrix4f T2, 
+                                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:99:6: error: prototype for ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>, cv::Mat)’ does not match any in class ‘DepthFilter’
+ void DepthFilter::updateFilter(Eigen::Matrix4f T, 
+      ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:30:7: error: candidate is: void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>)
+  void updateFilter(Eigen::Matrix4f T, 
+       ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

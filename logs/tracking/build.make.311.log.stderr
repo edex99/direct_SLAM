@@ -1,0 +1,25 @@
+In file included from /usr/include/eigen3/Eigen/Core:254:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Assign.h: In instantiation of ‘Derived& Eigen::DenseBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; Derived = Eigen::Matrix<float, 3, -1>]’:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:411:46:   required from ‘Derived& Eigen::PlainObjectBase<Derived>::lazyAssign(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; Derived = Eigen::Matrix<float, 3, -1>]’
+/usr/include/eigen3/Eigen/src/Core/Assign.h:520:123:   required from ‘static Derived& Eigen::internal::assign_selector<Derived, OtherDerived, false, false>::run(Derived&, const OtherDerived&) [with Derived = Eigen::Matrix<float, 3, -1>; OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >]’
+/usr/include/eigen3/Eigen/src/Core/Assign.h:564:89:   required from ‘Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; Derived = Eigen::Matrix<float, 3, -1>]’
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:450:38:   required from ‘Derived& Eigen::PlainObjectBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; Derived = Eigen::Matrix<float, 3, -1>]’
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:184:35:   required from ‘Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; _Scalar = float; int _Rows = 3; int _Cols = -1; int _Options = 0; int _MaxRows = 3; int _MaxCols = -1]’
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:310:13:   required from ‘Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; _Scalar = float; int _Rows = 3; int _Cols = -1; int _Options = 0; int _MaxRows = 3; int _MaxCols = -1]’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:25:74:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:32:40: error: static assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+                                        ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:182:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT’
+   EIGEN_STATIC_ASSERT( \
+   ^
+/usr/include/eigen3/Eigen/src/Core/Assign.h:492:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE’
+   EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(Derived,OtherDerived)
+   ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,274 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize(Eigen::Matrix<float, 8, 1>, cv::Mat, cv::Mat, cv::Mat, cv::Mat, cv::Mat, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:29: error: no match for ‘operator*’ (operand type is ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’)
+   rhs = (J_new.transpose())**e_new;
+                             ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:29: note: candidates are:
+In file included from /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:136:0,
+                 from /usr/include/eigen3/Eigen/Core:279,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:49:1: note: const ScalarMultipleReturnType Eigen::MatrixBase<Derived>::operator*(const Scalar&) const [with Derived = Eigen::Matrix<float, -1, 1>; Eigen::MatrixBase<Derived>::ScalarMultipleReturnType = Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<float>, const Eigen::Matrix<float, -1, 1> >; typename Eigen::internal::traits<T>::Scalar = float; Eigen::MatrixBase<Derived>::Scalar = float]
+ operator*(const Scalar& scalar) const
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:49:1: note:   candidate expects 1 argument, 0 provided
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:69:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<typename Eigen::internal::traits<T>::Scalar, std::complex<typename Eigen::internal::traits<T>::Scalar> >, const Derived> Eigen::MatrixBase<Derived>::operator*(const std::complex<typename Eigen::internal::traits<T>::Scalar>&) const [with Derived = Eigen::Matrix<float, -1, 1>; typename Eigen::internal::traits<T>::Scalar = float]
+ operator*(const std::complex<Scalar>& scalar) const
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:69:1: note:   candidate expects 1 argument, 0 provided
+In file included from /usr/include/eigen3/Eigen/Core:279:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:177:5: note: template<class OtherDerived> const typename Eigen::ProductReturnType<Derived, OtherDerived>::Type Eigen::MatrixBase<Derived>::operator*(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = OtherDerived; Derived = Eigen::Matrix<float, -1, 1>]
+     operator*(const MatrixBase<OtherDerived> &other) const;
+     ^
+/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:177:5: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 1 argument, 0 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:279:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:194:5: note: template<class DiagonalDerived> const Eigen::DiagonalProduct<Derived, DiagonalDerived, 2> Eigen::MatrixBase<Derived>::operator*(const Eigen::DiagonalBase<DiagonalDerived>&) const [with DiagonalDerived = DiagonalDerived; Derived = Eigen::Matrix<float, -1, 1>]
+     operator*(const DiagonalBase<DiagonalDerived> &diagonal) const;
+     ^
+/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:194:5: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 1 argument, 0 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:44:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/Scaling.h:111:1: note: Eigen::MatrixBase<Derived>::ScalarMultipleReturnType Eigen::MatrixBase<Derived>::operator*(const Eigen::UniformScaling<typename Eigen::internal::traits<T>::Scalar>&) const [with Derived = Eigen::Matrix<float, -1, 1>; Eigen::MatrixBase<Derived>::ScalarMultipleReturnType = Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<float>, const Eigen::Matrix<float, -1, 1> >; typename Eigen::internal::traits<T>::Scalar = float]
+ MatrixBase<Derived>::operator*(const UniformScaling<Scalar>& s) const
+ ^
+/usr/include/eigen3/Eigen/src/Geometry/Scaling.h:111:1: note:   candidate expects 1 argument, 0 provided
+In file included from /usr/include/eigen3/Eigen/Geometry:43:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/Translation.h:112:30: note: template<class OtherDerived> Eigen::Translation<float, 3>::AffineTransformType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Translation<float, 3>&)
+   inline AffineTransformType operator*(const EigenBase<OtherDerived>& linear, const Translation& t)
+                              ^
+/usr/include/eigen3/Eigen/src/Geometry/Translation.h:112:30: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:42:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:438:5: note: template<class DiagonalDerived> Eigen::Transform<double, 3, 2>::TransformTimeDiagonalReturnType Eigen::operator*(const Eigen::DiagonalBase<T>&, const Eigen::Transform<double, 3, 2>&)
+     operator * (const DiagonalBase<DiagonalDerived> &a, const Transform &b)
+     ^
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:438:5: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’ is not derived from ‘const Eigen::DiagonalBase<T>’
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:42:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:412:5: note: template<class OtherDerived> const typename Eigen::internal::transform_left_product_impl<OtherDerived, 2, 0, 3, 4, OtherDerived:: RowsAtCompileTime, OtherDerived:: ColsAtCompileTime>::ResultType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Transform<double, 3, 2>&)
+     operator * (const EigenBase<OtherDerived> &a, const Transform &b)
+     ^
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:412:5: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:42:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:438:5: note: template<class DiagonalDerived> Eigen::Transform<float, 3, 2>::TransformTimeDiagonalReturnType Eigen::operator*(const Eigen::DiagonalBase<T>&, const Eigen::Transform<float, 3, 2>&)
+     operator * (const DiagonalBase<DiagonalDerived> &a, const Transform &b)
+     ^
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:438:5: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’ is not derived from ‘const Eigen::DiagonalBase<T>’
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:42:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:412:5: note: template<class OtherDerived> const typename Eigen::internal::transform_left_product_impl<OtherDerived, 2, 0, 3, 4, OtherDerived:: RowsAtCompileTime, OtherDerived:: ColsAtCompileTime>::ResultType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Transform<float, 3, 2>&)
+     operator * (const EigenBase<OtherDerived> &a, const Transform &b)
+     ^
+/usr/include/eigen3/Eigen/src/Geometry/Transform.h:412:5: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:38:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note: template<class OtherDerived> Eigen::RotationBase<Eigen::Quaternion<double>, 3>::RotationMatrixType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Quaternion<double>&)
+     inline RotationMatrixType operator*(const EigenBase<OtherDerived>& l, const Derived& r)
+                               ^
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Geometry:38:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note: template<class OtherDerived> Eigen::RotationBase<Eigen::Quaternion<float>, 3>::RotationMatrixType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Quaternion<float>&)
+     inline RotationMatrixType operator*(const EigenBase<OtherDerived>& l, const Derived& r)
+                               ^
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Householder:17:0,
+                 from /usr/include/eigen3/Eigen/QR:10,
+                 from /usr/include/eigen3/Eigen/Dense:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:409:99: note: template<class OtherDerived, class VectorsType, class CoeffsType, int Side> typename Eigen::internal::matrix_type_times_scalar_type<typename VectorsType::Scalar, OtherDerived>::Type Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::HouseholderSequence<VectorsType, CoeffsType, Side>&)
+ typename internal::matrix_type_times_scalar_type<typename VectorsType::Scalar,OtherDerived>::Type operator*(const MatrixBase<OtherDerived>& other, const HouseholderSequence<VectorsType,CoeffsType,Side>& h)
+                                                                                                   ^
+/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:409:99: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:216:1: note: template<class Derived, class Lhs, class Rhs> typename Eigen::internal::enable_if<(! Eigen::internal::is_same<typename Derived::Scalar, typename Derived::RealScalar>::value), const Eigen::ScaledProduct<Derived> >::type Eigen::operator*(const typename Derived::RealScalar&, const Eigen::ProductBase<Derived, _Lhs, _Rhs>&)
+ operator*(const typename Derived::RealScalar& x,const ProductBase<Derived,Lhs,Rhs>& prod)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:216:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:210:1: note: template<class Derived, class Lhs, class Rhs> const Eigen::ScaledProduct<Derived> Eigen::operator*(const typename Derived::Scalar&, const Eigen::ProductBase<Derived, _Lhs, _Rhs>&)
+ operator*(const typename Derived::Scalar& x,const ProductBase<Derived,Lhs,Rhs>& prod)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:210:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:204:1: note: template<class Derived, class Lhs, class Rhs> typename Eigen::internal::enable_if<(! Eigen::internal::is_same<typename Derived::Scalar, typename Derived::RealScalar>::value), const Eigen::ScaledProduct<Derived> >::type Eigen::operator*(const Eigen::ProductBase<Derived, _Lhs, _Rhs>&, const typename Derived::RealScalar&)
+ operator*(const ProductBase<Derived,Lhs,Rhs>& prod, const typename Derived::RealScalar& x)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:204:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’ is not derived from ‘const Eigen::ProductBase<Derived, _Lhs, _Rhs>’
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:198:1: note: template<class Derived, class Lhs, class Rhs> const Eigen::ScaledProduct<Derived> Eigen::operator*(const Eigen::ProductBase<Derived, _Lhs, _Rhs>&, const typename Derived::Scalar&)
+ operator*(const ProductBase<Derived,Lhs,Rhs>& prod, const typename Derived::Scalar& x)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:198:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’ is not derived from ‘const Eigen::ProductBase<Derived, _Lhs, _Rhs>’
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:314:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:344:1: note: template<class Derived, class TranspositionDerived> const Eigen::internal::transposition_matrix_product_retval<TranspositionDerived, Derived, 1> Eigen::operator*(const Eigen::TranspositionsBase<TranspositionsDerived>&, const Eigen::MatrixBase<Derived>&)
+ operator*(const TranspositionsBase<TranspositionDerived> &transpositions,
+ ^
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:344:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’ is not derived from ‘const Eigen::TranspositionsBase<TranspositionsDerived>’
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:314:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:331:1: note: template<class Derived, class TranspositionsDerived> const Eigen::internal::transposition_matrix_product_retval<TranspositionsDerived, Derived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::TranspositionsBase<TranspositionsDerived>&)
+ operator*(const MatrixBase<Derived>& matrix,
+ ^
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:331:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:313:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:523:1: note: template<class Derived, class PermutationDerived> const Eigen::internal::permut_matrix_product_retval<PermutationDerived, Derived, 1> Eigen::operator*(const Eigen::PermutationBase<PermutationDerived>&, const Eigen::MatrixBase<Derived>&)
+ operator*(const PermutationBase<PermutationDerived> &permutation,
+ ^
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:523:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   ‘Eigen::VectorXf {aka Eigen::Matrix<float, -1, 1>}’ is not derived from ‘const Eigen::PermutationBase<PermutationDerived>’
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/Core:313:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:510:1: note: template<class Derived, class PermutationDerived> const Eigen::internal::permut_matrix_product_retval<PermutationDerived, Derived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::PermutationBase<PermutationDerived>&)
+ operator*(const MatrixBase<Derived>& matrix,
+ ^
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:510:1: note:   template argument deduction/substitution failed:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:155:30: note:   candidate expects 2 arguments, 1 provided
+   rhs = (J_new.transpose())**e_new;
+                              ^
+In file included from /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:136:0,
+                 from /usr/include/eigen3/Eigen/Core:279,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::Matrix<float, -1, 1> > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   candidate expects 2 arguments, 1 provided
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   candidate expects 2 arguments, 1 provided
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:109:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

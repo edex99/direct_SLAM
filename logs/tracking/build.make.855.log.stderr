@@ -1,0 +1,39 @@
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:21:10: error: ‘ORB’ was not declared in this scope
+  cv::Ptr<ORB> orb;
+          ^
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:21:10: note: suggested alternative:
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:50:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:
+/usr/local/include/opencv2/features2d.hpp:254:20: note:   ‘cv::ORB’
+ class CV_EXPORTS_W ORB : public Feature2D
+                    ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:21:13: error: template argument 1 is invalid
+  cv::Ptr<ORB> orb;
+             ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:3:55: error: return type specification for constructor invalid
+ void FeatureDetector::FeatureDetector(int max_features) {
+                                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:3:6: error: prototype for ‘FeatureDetector::FeatureDetector(int)’ does not match any in class ‘FeatureDetector’
+ void FeatureDetector::FeatureDetector(int max_features) {
+      ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:8:7: error: candidates are: FeatureDetector::FeatureDetector(FeatureDetector&&)
+ class FeatureDetector {
+       ^
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:8:7: error:                 FeatureDetector::FeatureDetector(const FeatureDetector&)
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:12:2: error:                 FeatureDetector::FeatureDetector()
+  FeatureDetector();
+  ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:8:6: error: prototype for ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’ does not match any in class ‘FeatureDetector’
+ void FeatureDetector::detectFeatures(std::vector<cv::Mat> pyr) {
+      ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:13:7: error: candidate is: void FeatureDetector::detectFeatures(cv::Mat)
+  void detectFeatures(cv::Mat img);
+       ^
+make[2]: *** [CMakeFiles/tracking.dir/src/FeatureDetector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In member function ‘Eigen::Matrix<float, 2, -1> PixelSelector::epipolar_line_search(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:127:101: error: ‘SSD’ was not declared in this scope
+     if ((prev_pixel_coord(0,i) >= (curr.cols-SSD_size/2-1)) || (prev_pixel_coord(1,i) >= (curr.rows-SSD+size/2-1)) 
+                                                                                                     ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:127:105: error: ‘size’ was not declared in this scope
+     if ((prev_pixel_coord(0,i) >= (curr.cols-SSD_size/2-1)) || (prev_pixel_coord(1,i) >= (curr.rows-SSD+size/2-1)) 
+                                                                                                         ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

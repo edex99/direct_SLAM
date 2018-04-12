@@ -1,0 +1,16 @@
+In file included from /usr/include/eigen3/Eigen/Core:254:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h: In instantiation of ‘Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::MatrixBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, 1> >; _Scalar = int; int _Rows = -1; int _Cols = 1; int _Options = 0; int _MaxRows = -1; int _MaxCols = 1]’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:229:65:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:32:40: error: static assertion failed: YOU_MIXED_DIFFERENT_NUMERIC_TYPES__YOU_NEED_TO_USE_THE_CAST_METHOD_OF_MATRIXBASE_TO_CAST_NUMERIC_TYPES_EXPLICITLY
+     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+                                        ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:277:7: note: in expansion of macro ‘EIGEN_STATIC_ASSERT’
+       EIGEN_STATIC_ASSERT((internal::is_same<Scalar, typename OtherDerived::Scalar>::value),
+       ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

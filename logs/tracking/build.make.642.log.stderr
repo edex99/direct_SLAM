@@ -1,0 +1,7 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:92:16: error: ‘x’ was not declared in this scope
+   std::cout << x << std::endl;
+                ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

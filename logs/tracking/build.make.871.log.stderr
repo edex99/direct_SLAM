@@ -1,0 +1,16 @@
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp: In member function ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:11:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<pyr.size(); i++) {
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:21:35: error: too few arguments to function ‘void cv::drawKeypoints(cv::InputArray, const std::vector<cv::KeyPoint>&, cv::InputOutputArray, const Scalar&, int)’
+   cv::drawKeypoints(img, keypoints);
+                                   ^
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:50:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:
+/usr/local/include/opencv2/features2d.hpp:1079:19: note: declared here
+ CV_EXPORTS_W void drawKeypoints( InputArray image, const std::vector<KeyPoint>& keypoints, InputOutputArray outImage,
+                   ^
+make[2]: *** [CMakeFiles/tracking.dir/src/FeatureDetector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

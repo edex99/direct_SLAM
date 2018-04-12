@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:87:44: error: ‘v’ was not declared in this scope
+       std::cout << "u: " << u << " v: " << v << std::endl;
+                                            ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:101:29: error: ‘u’ was not declared in this scope
+       std::cout << "u: " << u << " v: " << v << std::endl;
+                             ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

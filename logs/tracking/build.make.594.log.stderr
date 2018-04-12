@@ -1,0 +1,11 @@
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:25:8: error: extra qualification ‘DepthFilter::’ on member ‘computeTau’ [-fpermissive]
+  float DepthFilter::computeTau(Eigen::Matrix4f T, Eigen::Vector3f p);
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:52: error: ‘z’ was not declared in this scope
+   float tau_inv  =  0.5 * (1.0/std::max(0.0000001, z-tau) - 1.0/(z+tau));
+                                                    ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

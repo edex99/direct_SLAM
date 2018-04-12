@@ -1,0 +1,4 @@
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp: In function ‘Eigen::VectorXf warpedValues(cv::Mat, Eigen::MatrixXf, Eigen::VectorXf)’:
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:234:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^

@@ -1,0 +1,4 @@
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp: In function ‘Eigen::VectorXf warpedValues(cv::Mat, Eigen::MatrixXf, Eigen::VectorXf)’:
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:205:8: warning: unused variable ‘epsilon’ [-Wunused-variable]
+  float epsilon = 0.001;
+        ^

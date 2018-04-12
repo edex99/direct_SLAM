@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp: In member function ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:12:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<pyr.size(); i++) {
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:22:19: error: ‘eypoints’ was not declared in this scope
+   for (int i=0; i<eypoints.size();i++) {
+                   ^
+make[2]: *** [CMakeFiles/tracking.dir/src/FeatureDetector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

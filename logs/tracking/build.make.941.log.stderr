@@ -1,0 +1,7 @@
+/home/dexheimere/thesis_ws/src/tracking/src/main.cpp:26:19: fatal error: DBoW2.h: No such file or directory
+ #include "DBoW2.h"
+                   ^
+compilation terminated.
+make[2]: *** [CMakeFiles/tracking.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

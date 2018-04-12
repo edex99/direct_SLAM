@@ -1,0 +1,28 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘void updateFilter(Eigen::Matrix<float, 4, -1>&, Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:57:17: warning: value computed is not used [-Wunused-value]
+  for (int i=0; i<filter.cols(), i++) {
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:57:36: error: expected ‘;’ before ‘)’ token
+  for (int i=0; i<filter.cols(), i++) {
+                                    ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:62:43: error: ‘x’ was not declared in this scope
+   float m = s2*(filter(2,i)/filter(3,i) + x/tau2);
+                                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:64:17: error: ‘C1’ was not declared in this scope
+   float u_new = C1*m + C2*filter(2,i);
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:64:24: error: ‘C2’ was not declared in this scope
+   float u_new = C1*m + C2*filter(2,i);
+                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:67:9: error: redeclaration of ‘float m’
+   float m = C1*(filter(0,i)+1)*(filter(0,i)+2)/((filter(0,i)+filter(1,i)+1)*(filter(0,i)+filter(1,i)+2));
+         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:62:9: error: ‘float m’ previously declared here
+   float m = s2*(filter(2,i)/filter(3,i) + x/tau2);
+         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:71:53: error: ‘a’ was not declared in this scope
+   float temp = (filter(0,i)+filter(1,i)+1)/((C1+C2)*a+C1) -1;
+                                                     ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

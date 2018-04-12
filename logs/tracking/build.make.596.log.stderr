@@ -1,0 +1,7 @@
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:25:8: error: extra qualification ‘DepthFilter::’ on member ‘computeTau’ [-fpermissive]
+  float DepthFilter::computeTau(Eigen::Matrix4f T, Eigen::Vector3f p);
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

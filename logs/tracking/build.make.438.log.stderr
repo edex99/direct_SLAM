@@ -1,0 +1,22 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/main.cpp:20:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/main.cpp: In function ‘int main()’:
+/home/dexheimere/thesis_ws/src/tracking/src/main.cpp:46:19: warning: variable ‘T_curr’ set but not used [-Wunused-but-set-variable]
+   Eigen::Matrix4f T_curr = Eigen::Matrix4f::Identity();
+                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/main.cpp:47:19: warning: variable ‘T_keyframe’ set but not used [-Wunused-but-set-variable]
+   Eigen::Matrix4f T_keyframe = Eigen::Matrix4f::Identity();
+                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/main.cpp:172:1: error: expected ‘}’ at end of input
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

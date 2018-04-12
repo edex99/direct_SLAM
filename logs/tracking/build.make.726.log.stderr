@@ -1,0 +1,7 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::initializeFilter(cv::Mat, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:80:21: error: base operand of ‘->’ has non-pointer type ‘Eigen::Matrix<float, 4, -1>’
+  std::cout << filter->transpose() << std::endl;
+                     ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

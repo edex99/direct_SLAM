@@ -1,0 +1,16 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘void updateFilter(Eigen::Matrix<float, 4, -1>&, Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:76:37: error: ‘z_max’ was not declared in this scope
+   float C2 = filter(1)/(num_points*(z_max-z_min));
+                                     ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:76:43: error: ‘z_min’ was not declared in this scope
+   float C2 = filter(1)/(num_points*(z_max-z_min));
+                                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:81:9: error: redeclaration of ‘float m’
+   float m = C1*(filter(0,i)+1.0f)*(filter(0,i)+2.0f)/((num_points+1.0f)*(num_points+2.0f));
+         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:72:9: error: ‘float m’ previously declared here
+   float m = s2*(filter(2,i)/filter(3,i) + x/(tau*tau));
+         ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

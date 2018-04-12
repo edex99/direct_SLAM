@@ -1,0 +1,34 @@
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp: In member function ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:11:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<pyr.size(); i++) {
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:18:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i=0; i<local_keypoints.size();i++) {
+                                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:19:34: error: cannot bind ‘std::ostream {aka std::basic_ostream<char>}’ lvalue to ‘std::basic_ostream<char>&&’
+    std::cout << local_keypoints[i] << std::endl;
+                                  ^
+In file included from /usr/include/c++/4.8/istream:39:0,
+                 from /usr/include/c++/4.8/sstream:38,
+                 from /usr/include/c++/4.8/complex:45,
+                 from /usr/local/include/opencv2/core/cvstd.inl.hpp:48,
+                 from /usr/local/include/opencv2/core.hpp:3107,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:
+/usr/include/c++/4.8/ostream:602:5: error:   initializing argument 1 of ‘std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = cv::KeyPoint]’
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+make[2]: *** [CMakeFiles/tracking.dir/src/FeatureDetector.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/main.cpp:20:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

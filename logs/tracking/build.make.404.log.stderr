@@ -1,0 +1,295 @@
+In file included from /usr/include/eigen3/Eigen/Core:254:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h: In instantiation of ‘Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<typename ExpressionType::Scalar>, const typename Eigen::internal::remove_all<typename Eigen::internal::conditional<Eigen::internal::must_nest_by_value<ExpressionType>::ret, ExpressionType, ExpressionType&>::type>::type, const typename Eigen::VectorwiseOp<ExpressionType, Direction>::ExtendedType<OtherDerived>::Type> Eigen::VectorwiseOp<ExpressionType, Direction>::operator*(const Eigen::DenseBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<float, 1, 3>; ExpressionType = const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; int Direction = 1; typename Eigen::VectorwiseOp<ExpressionType, Direction>::ExtendedType<OtherDerived>::Type = Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>; typename Eigen::internal::remove_all<typename Eigen::internal::conditional<Eigen::internal::must_nest_by_value<ExpressionType>::ret, ExpressionType, ExpressionType&>::type>::type = Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; typename ExpressionType::Scalar = float]’:
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:104:50:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:32:40: error: static assertion failed: YOU_CANNOT_MIX_ARRAYS_AND_MATRICES
+     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+                                        ^
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:200:7: note: in expansion of macro ‘EIGEN_STATIC_ASSERT’
+       EIGEN_STATIC_ASSERT((internal::is_same<typename internal::traits<Derived1>::XprKind, \
+       ^
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:516:7: note: in expansion of macro ‘EIGEN_STATIC_ASSERT_SAME_XPR_KIND’
+       EIGEN_STATIC_ASSERT_SAME_XPR_KIND(ExpressionType, OtherDerived)
+       ^
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: error: no match for ‘operator*’ (operand types are ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ and ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’)
+       return m_matrix * extendedTo(other.derived());
+                       ^
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note: candidates are:
+In file included from /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:107:0,
+                 from /usr/include/eigen3/Eigen/Core:350,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:49:1: note: const ScalarMultipleReturnType Eigen::ArrayBase<Derived>::operator*(const Scalar&) const [with Derived = Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; Eigen::ArrayBase<Derived>::ScalarMultipleReturnType = Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<float>, const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> > >; typename Eigen::internal::traits<T>::Scalar = float; Eigen::ArrayBase<Derived>::Scalar = float]
+ operator*(const Scalar& scalar) const
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:49:1: note:   no known conversion for argument 1 from ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’ to ‘const Scalar& {aka const float&}’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:69:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<typename Eigen::internal::traits<T>::Scalar, std::complex<typename Eigen::internal::traits<T>::Scalar> >, const Derived> Eigen::ArrayBase<Derived>::operator*(const std::complex<typename Eigen::internal::traits<T>::Scalar>&) const [with Derived = Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; typename Eigen::internal::traits<T>::Scalar = float]
+ operator*(const std::complex<Scalar>& scalar) const
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:69:1: note:   no known conversion for argument 1 from ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’ to ‘const std::complex<float>&’
+In file included from /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:112:0,
+                 from /usr/include/eigen3/Eigen/Core:350,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/ArrayCwiseBinaryOps.h:7:1: note: template<class OtherDerived> const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<typename Eigen::internal::traits<T>::Scalar, typename Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::ArrayBase<Derived>::operator*(const Eigen::ArrayBase<OtherDerived>&) const [with OtherDerived = OtherDerived; Derived = Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >]
+ operator*(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/ArrayCwiseBinaryOps.h:7:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’ is not derived from ‘const Eigen::ArrayBase<Derived>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:255:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:375:8: note: void Eigen::internal::special_scalar_op_base<Derived, Scalar, OtherScalar, EnableIt>::operator*() const [with Derived = Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; Scalar = float; OtherScalar = float; bool EnableIt = false]
+   void operator*() const;
+        ^
+/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:375:8: note:   candidate expects 0 arguments, 1 provided
+In file included from /usr/include/eigen3/Eigen/Geometry:38:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note: template<class OtherDerived> Eigen::RotationBase<Eigen::Quaternion<double>, 3>::RotationMatrixType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Quaternion<double>&)
+     inline RotationMatrixType operator*(const EigenBase<OtherDerived>& l, const Derived& r)
+                               ^
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   cannot convert ‘Eigen::VectorwiseOp<ExpressionType, Direction>::extendedTo(const Eigen::DenseBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<float, 1, 3>; ExpressionType = const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; int Direction = 1; typename Eigen::VectorwiseOp<ExpressionType, Direction>::ExtendedType<OtherDerived>::Type = Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>]((*(const Eigen::DenseBase<Eigen::Matrix<float, 1, 3> >*)(&((const Eigen::EigenBase<Eigen::Matrix<float, 1, 3> >*)(& other))->Eigen::EigenBase<Derived>::derived<Eigen::Matrix<float, 1, 3> >())))’ (type ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’) to type ‘const Eigen::Quaternion<double>&’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Geometry:38:0,
+                 from /usr/include/eigen3/Eigen/Dense:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note: template<class OtherDerived> Eigen::RotationBase<Eigen::Quaternion<float>, 3>::RotationMatrixType Eigen::operator*(const Eigen::EigenBase<Derived>&, const Eigen::Quaternion<float>&)
+     inline RotationMatrixType operator*(const EigenBase<OtherDerived>& l, const Derived& r)
+                               ^
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:76:31: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   cannot convert ‘Eigen::VectorwiseOp<ExpressionType, Direction>::extendedTo(const Eigen::DenseBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<float, 1, 3>; ExpressionType = const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; int Direction = 1; typename Eigen::VectorwiseOp<ExpressionType, Direction>::ExtendedType<OtherDerived>::Type = Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>]((*(const Eigen::DenseBase<Eigen::Matrix<float, 1, 3> >*)(&((const Eigen::EigenBase<Eigen::Matrix<float, 1, 3> >*)(& other))->Eigen::EigenBase<Derived>::derived<Eigen::Matrix<float, 1, 3> >())))’ (type ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’) to type ‘const Eigen::Quaternion<float>&’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Householder:17:0,
+                 from /usr/include/eigen3/Eigen/QR:10,
+                 from /usr/include/eigen3/Eigen/Dense:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:409:99: note: template<class OtherDerived, class VectorsType, class CoeffsType, int Side> typename Eigen::internal::matrix_type_times_scalar_type<typename VectorsType::Scalar, OtherDerived>::Type Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::HouseholderSequence<VectorsType, CoeffsType, Side>&)
+ typename internal::matrix_type_times_scalar_type<typename VectorsType::Scalar,OtherDerived>::Type operator*(const MatrixBase<OtherDerived>& other, const HouseholderSequence<VectorsType,CoeffsType,Side>& h)
+                                                                                                   ^
+/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:409:99: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::MatrixBase<Derived>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:216:1: note: template<class Derived, class Lhs, class Rhs> typename Eigen::internal::enable_if<(! Eigen::internal::is_same<typename Derived::Scalar, typename Derived::RealScalar>::value), const Eigen::ScaledProduct<Derived> >::type Eigen::operator*(const typename Derived::RealScalar&, const Eigen::ProductBase<Derived, _Lhs, _Rhs>&)
+ operator*(const typename Derived::RealScalar& x,const ProductBase<Derived,Lhs,Rhs>& prod)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:216:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’ is not derived from ‘const Eigen::ProductBase<Derived, _Lhs, _Rhs>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:210:1: note: template<class Derived, class Lhs, class Rhs> const Eigen::ScaledProduct<Derived> Eigen::operator*(const typename Derived::Scalar&, const Eigen::ProductBase<Derived, _Lhs, _Rhs>&)
+ operator*(const typename Derived::Scalar& x,const ProductBase<Derived,Lhs,Rhs>& prod)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:210:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘Eigen::VectorwiseOp<const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >, 1>::ExtendedType<Eigen::Matrix<float, 1, 3> >::Type {aka Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>}’ is not derived from ‘const Eigen::ProductBase<Derived, _Lhs, _Rhs>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:204:1: note: template<class Derived, class Lhs, class Rhs> typename Eigen::internal::enable_if<(! Eigen::internal::is_same<typename Derived::Scalar, typename Derived::RealScalar>::value), const Eigen::ScaledProduct<Derived> >::type Eigen::operator*(const Eigen::ProductBase<Derived, _Lhs, _Rhs>&, const typename Derived::RealScalar&)
+ operator*(const ProductBase<Derived,Lhs,Rhs>& prod, const typename Derived::RealScalar& x)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:204:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::ProductBase<Derived, _Lhs, _Rhs>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:322:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:198:1: note: template<class Derived, class Lhs, class Rhs> const Eigen::ScaledProduct<Derived> Eigen::operator*(const Eigen::ProductBase<Derived, _Lhs, _Rhs>&, const typename Derived::Scalar&)
+ operator*(const ProductBase<Derived,Lhs,Rhs>& prod, const typename Derived::Scalar& x)
+ ^
+/usr/include/eigen3/Eigen/src/Core/ProductBase.h:198:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::ProductBase<Derived, _Lhs, _Rhs>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:314:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:344:1: note: template<class Derived, class TranspositionDerived> const Eigen::internal::transposition_matrix_product_retval<TranspositionDerived, Derived, 1> Eigen::operator*(const Eigen::TranspositionsBase<TranspositionsDerived>&, const Eigen::MatrixBase<Derived>&)
+ operator*(const TranspositionsBase<TranspositionDerived> &transpositions,
+ ^
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:344:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::TranspositionsBase<TranspositionsDerived>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:314:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:331:1: note: template<class Derived, class TranspositionsDerived> const Eigen::internal::transposition_matrix_product_retval<TranspositionsDerived, Derived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::TranspositionsBase<TranspositionsDerived>&)
+ operator*(const MatrixBase<Derived>& matrix,
+ ^
+/usr/include/eigen3/Eigen/src/Core/Transpositions.h:331:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::MatrixBase<Derived>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:313:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:523:1: note: template<class Derived, class PermutationDerived> const Eigen::internal::permut_matrix_product_retval<PermutationDerived, Derived, 1> Eigen::operator*(const Eigen::PermutationBase<PermutationDerived>&, const Eigen::MatrixBase<Derived>&)
+ operator*(const PermutationBase<PermutationDerived> &permutation,
+ ^
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:523:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::PermutationBase<PermutationDerived>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/Core:313:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:510:1: note: template<class Derived, class PermutationDerived> const Eigen::internal::permut_matrix_product_retval<PermutationDerived, Derived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::PermutationBase<PermutationDerived>&)
+ operator*(const MatrixBase<Derived>& matrix,
+ ^
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:510:1: note:   template argument deduction/substitution failed:
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:517:23: note:   ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ is not derived from ‘const Eigen::MatrixBase<Derived>’
+       return m_matrix * extendedTo(other.derived());
+                       ^
+In file included from /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:107:0,
+                 from /usr/include/eigen3/Eigen/Core:350,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> > > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const std::complex<float>&’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const Scalar& {aka const float&}’
+In file included from /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:136:0,
+                 from /usr/include/eigen3/Eigen/Core:279,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const std::complex<float>&’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const Scalar& {aka const float&}’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::Matrix<float, 3, 3> > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const std::complex<float>&’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const Scalar& {aka const float&}’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::Matrix<float, -1, -1> > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const std::complex<float>&’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const Scalar& {aka const float&}’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1> > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const std::complex<float>&’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const Scalar& {aka const float&}’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note: const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple2_op<float, std::complex<float> >, const Eigen::Matrix<float, 1, 3> > Eigen::operator*(const std::complex<float>&, const StorageBaseType&)
+ operator*(const std::complex<Scalar>& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:80:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const std::complex<float>&’
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note: const ScalarMultipleReturnType Eigen::operator*(const Scalar&, const StorageBaseType&)
+ operator*(const Scalar& scalar, const StorageBaseType& matrix)
+ ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:76:1: note:   no known conversion for argument 1 from ‘const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >’ to ‘const Scalar& {aka const float&}’
+In file included from /usr/include/eigen3/Eigen/Core:346:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h: In member function ‘Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<typename ExpressionType::Scalar>, const typename Eigen::internal::remove_all<typename Eigen::internal::conditional<Eigen::internal::must_nest_by_value<ExpressionType>::ret, ExpressionType, ExpressionType&>::type>::type, const typename Eigen::VectorwiseOp<ExpressionType, Direction>::ExtendedType<OtherDerived>::Type> Eigen::VectorwiseOp<ExpressionType, Direction>::operator*(const Eigen::DenseBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<float, 1, 3>; ExpressionType = const Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; int Direction = 1; typename Eigen::VectorwiseOp<ExpressionType, Direction>::ExtendedType<OtherDerived>::Type = Eigen::Replicate<Eigen::Matrix<float, 1, 3>, 3, 1>; typename Eigen::internal::remove_all<typename Eigen::internal::conditional<Eigen::internal::must_nest_by_value<ExpressionType>::ret, ExpressionType, ExpressionType&>::type>::type = Eigen::ArrayWrapper<const Eigen::GeneralProduct<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, -1, -1>, 5> >; typename ExpressionType::Scalar = float]’:
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:518:5: warning: control reaches end of non-void function [-Wreturn-type]
+     }
+     ^
+make[2]: *** [CMakeFiles/tracking.dir/src/ImageProcessing.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

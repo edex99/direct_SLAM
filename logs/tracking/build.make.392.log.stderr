@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp: In function ‘Eigen::VectorXf warpedValues2(cv::Mat, Eigen::MatrixXf, Eigen::MatrixXf, Eigen::VectorXf)’:
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:245:13: error: ‘src’ was not declared in this scope
+  cv::remap( src, dst, map_x, map_y, cv::INTER_LINEAR, cv::BORDER_CONSTANT, cv::Scalar(0) );
+             ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:246:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/ImageProcessing.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

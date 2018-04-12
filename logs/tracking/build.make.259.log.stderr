@@ -1,0 +1,20 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘Eigen::Matrix<float, 3, -1> triangulatePoint(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:25:93: error: no matching function for call to ‘Eigen::MatrixWrapper<Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> > >::rows(int)’
+  return (out_homogeneous.array().rowwise()/(out_homogeneous.row(3).array())).matrix().rows(3);
+                                                                                             ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:25:93: note: candidate is:
+In file included from /usr/include/eigen3/Eigen/Core:351:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:173:18: note: Eigen::MatrixWrapper<ExpressionType>::Index Eigen::MatrixWrapper<ExpressionType>::rows() const [with ExpressionType = Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<float, float>, const Eigen::ArrayWrapper<Eigen::Matrix<float, 4, -1> >, const Eigen::Replicate<Eigen::ArrayWrapper<Eigen::Block<Eigen::Matrix<float, 4, -1>, 1, -1, false> >, 4, 1> >; Eigen::MatrixWrapper<ExpressionType>::Index = long int]
+     inline Index rows() const { return m_expression.rows(); }
+                  ^
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:173:18: note:   candidate expects 0 arguments, 1 provided
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:26:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

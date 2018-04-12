@@ -1,0 +1,68 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘Eigen::Matrix<float, 3, -1> DepthFilter::triangulatePoints(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:28:21: error: no match for call to ‘(Eigen::Matrix<float, 2, -1>) (int, <unresolved overloaded function type>)’
+    uv1 << p2(0,index),p2(1,index),1;
+                     ^
+In file included from /usr/include/eigen3/Eigen/Core:294:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:127:7: note: candidates are:
+ class Matrix
+       ^
+In file included from /usr/include/eigen3/Eigen/Core:277:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:111:41: note: Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType Eigen::DenseCoeffsBase<Derived, 0>::operator()(Eigen::DenseCoeffsBase<Derived, 0>::Index, Eigen::DenseCoeffsBase<Derived, 0>::Index) const [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType = const float&; Eigen::DenseCoeffsBase<Derived, 0>::Index = long int]
+     EIGEN_STRONG_INLINE CoeffReturnType operator()(Index row, Index col) const
+                                         ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:111:41: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘Eigen::DenseCoeffsBase<Eigen::Matrix<float, 2, -1>, 0>::Index {aka long int}’
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:171:5: note: Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType Eigen::DenseCoeffsBase<Derived, 0>::operator()(Eigen::DenseCoeffsBase<Derived, 0>::Index) const [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType = const float&; Eigen::DenseCoeffsBase<Derived, 0>::Index = long int]
+     operator()(Index index) const
+     ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:171:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:392:5: note: Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator()(Eigen::DenseCoeffsBase<Derived, 1>::Index) [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = float; Eigen::DenseCoeffsBase<Derived, 1>::Index = long int]
+     operator()(Index index)
+     ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:392:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:334:5: note: Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator()(Eigen::DenseCoeffsBase<Derived, 1>::Index, Eigen::DenseCoeffsBase<Derived, 1>::Index) [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = float; Eigen::DenseCoeffsBase<Derived, 1>::Index = long int]
+     operator()(Index row, Index col)
+     ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:334:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘Eigen::DenseCoeffsBase<Eigen::Matrix<float, 2, -1>, 1>::Index {aka long int}’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:28:33: error: no match for call to ‘(Eigen::Matrix<float, 2, -1>) (int, <unresolved overloaded function type>)’
+    uv1 << p2(0,index),p2(1,index),1;
+                                 ^
+In file included from /usr/include/eigen3/Eigen/Core:294:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:127:7: note: candidates are:
+ class Matrix
+       ^
+In file included from /usr/include/eigen3/Eigen/Core:277:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:111:41: note: Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType Eigen::DenseCoeffsBase<Derived, 0>::operator()(Eigen::DenseCoeffsBase<Derived, 0>::Index, Eigen::DenseCoeffsBase<Derived, 0>::Index) const [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType = const float&; Eigen::DenseCoeffsBase<Derived, 0>::Index = long int]
+     EIGEN_STRONG_INLINE CoeffReturnType operator()(Index row, Index col) const
+                                         ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:111:41: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘Eigen::DenseCoeffsBase<Eigen::Matrix<float, 2, -1>, 0>::Index {aka long int}’
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:171:5: note: Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType Eigen::DenseCoeffsBase<Derived, 0>::operator()(Eigen::DenseCoeffsBase<Derived, 0>::Index) const [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 0>::CoeffReturnType = const float&; Eigen::DenseCoeffsBase<Derived, 0>::Index = long int]
+     operator()(Index index) const
+     ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:171:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:392:5: note: Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator()(Eigen::DenseCoeffsBase<Derived, 1>::Index) [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = float; Eigen::DenseCoeffsBase<Derived, 1>::Index = long int]
+     operator()(Index index)
+     ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:392:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:334:5: note: Eigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator()(Eigen::DenseCoeffsBase<Derived, 1>::Index, Eigen::DenseCoeffsBase<Derived, 1>::Index) [with Derived = Eigen::Matrix<float, 2, -1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = float; Eigen::DenseCoeffsBase<Derived, 1>::Index = long int]
+     operator()(Index row, Index col)
+     ^
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:334:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘Eigen::DenseCoeffsBase<Eigen::Matrix<float, 2, -1>, 1>::Index {aka long int}’
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

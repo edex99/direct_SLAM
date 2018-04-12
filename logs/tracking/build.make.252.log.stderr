@@ -1,0 +1,40 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘Eigen::Vector3f triangulatePoint(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Vector3f, Eigen::Vector3f)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:19: error: ‘MatrixXf’ was not declared in this scope
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:19: note: suggested alternative:
+In file included from /usr/include/eigen3/Eigen/Core:294:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:372:34: note:   ‘Eigen::MatrixXf’
+ typedef Matrix<Type, Size, Size> Matrix##SizeSuffix##TypeSuffix;  \
+                                  ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:388:1: note: in expansion of macro ‘EIGEN_MAKE_TYPEDEFS’
+ EIGEN_MAKE_TYPEDEFS(Type, TypeSuffix, Dynamic, X) \
+ ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:394:1: note: in expansion of macro ‘EIGEN_MAKE_TYPEDEFS_ALL_SIZES’
+ EIGEN_MAKE_TYPEDEFS_ALL_SIZES(float,                f)
+ ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:27: error: template argument 1 is invalid
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:32: error: invalid type in declaration before ‘(’ token
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:34: error: cannot convert ‘Eigen::Matrix4f {aka Eigen::Matrix<float, 4, 4>}’ to ‘int’ in initialization
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:16:26: error: request for member ‘matrixV’ in ‘svd’, which is of non-class type ‘int’
+  Eigen::Matrix4f V = svd.matrixV();
+                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:16:18: warning: unused variable ‘V’ [-Wunused-variable]
+  Eigen::Matrix4f V = svd.matrixV();
+                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:18:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

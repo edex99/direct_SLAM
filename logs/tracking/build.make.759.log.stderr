@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:144:31: error: expected ‘)’ before numeric constant
+   float e = C1*((*filter)(0,i)1.)*((*filter)(0,i)+2.)/((num_obs+1.)*(num_obs+2.))
+                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:147:88: error: ‘mu_new’ was not declared in this scope
+    float var_new = C1*(s2 + m*m) + C2*((*filter)(3,i)+(*filter)(2,i)*(*filter)(2,i)) - mu_new*mu_new;
+                                                                                        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

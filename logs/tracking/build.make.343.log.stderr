@@ -1,0 +1,34 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize(Eigen::Matrix<float, 8, 1>, cv::Mat, cv::Mat, cv::Mat, cv::Mat, cv::Mat, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:129:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> directTransformationEstimation(std::vector<cv::Mat>, std::vector<cv::Mat>, std::vector<cv::Mat>, cv::Mat&, Eigen::Matrix<float, 8, 1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:71: error: ‘ColumnMajor’ is not a member of ‘Eigen’
+       Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColumnMajor>> A_Eigen(depthLocations_f.ptr<float>(), depthLocations_f.rows, depthLocations_f.cols);
+                                                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:71: error: ‘ColumnMajor’ is not a member of ‘Eigen’
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:78: error: template argument 4 is invalid
+       Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColumnMajor>> A_Eigen(depthLocations_f.ptr<float>(), depthLocations_f.rows, depthLocations_f.cols);
+                                                                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:89: error: template argument 1 is invalid
+       Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColumnMajor>> A_Eigen(depthLocations_f.ptr<float>(), depthLocations_f.rows, depthLocations_f.cols);
+                                                                                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:99: error: invalid type in declaration before ‘(’ token
+       Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColumnMajor>> A_Eigen(depthLocations_f.ptr<float>(), depthLocations_f.rows, depthLocations_f.cols);
+                                                                                                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:175: error: expression list treated as compound expression in initializer [-fpermissive]
+       Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::ColumnMajor>> A_Eigen(depthLocations_f.ptr<float>(), depthLocations_f.rows, depthLocations_f.cols);
+                                                                                                                                                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:175: warning: right operand of comma operator has no effect [-Wunused-value]
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

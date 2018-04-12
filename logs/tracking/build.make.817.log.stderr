@@ -1,0 +1,44 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘Eigen::Vector2f DepthFilter::epipolar_match(Eigen::Vector3f, Eigen::Matrix3f, cv::Mat, cv::Mat, bool&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:40:24: error: ‘line_check_dist’ was not declared in this scope
+     int start = p_h(0)-line_check_dist;
+                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:42:18: error: ‘SSD_size’ was not declared in this scope
+     if (start < (SSD_size/2+1))
+                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:44:26: error: ‘SSD_size’ was not declared in this scope
+     if (end > (curr.cols-SSD_size/2-1))
+                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:48:25: error: ‘SSD_size’ was not declared in this scope
+       if ((v>(curr.rows-SSD_size/2-1)) || (v<SSD_size/2+1)) {
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:53:44: error: ‘SSD_size’ was not declared in this scope
+       cv::Mat curr_block = curr(cv::Rect(u-SSD_size/2,v-SSD_size/2,SSD_size,SSD_size));
+                                            ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:80:24: error: ‘line_check_dist’ was not declared in this scope
+     int start = p_h(1)-line_check_dist;
+                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:82:18: error: ‘SSD_size’ was not declared in this scope
+     if (start < (SSD_size/2+1))
+                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:84:26: error: ‘SSD_size’ was not declared in this scope
+     if (end > (curr.rows-SSD_size/2-1))
+                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:88:25: error: ‘SSD_size’ was not declared in this scope
+       if ((u>(curr.cols-SSD_size/2-1)) || (u<SSD_size/2+1)) {
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:93:44: error: ‘SSD_size’ was not declared in this scope
+       cv::Mat curr_block = curr(cv::Rect(u-SSD_size/2,v-SSD_size/2,SSD_size,SSD_size));
+                                            ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/main.cpp:20:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

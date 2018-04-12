@@ -1,0 +1,39 @@
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:25:8: error: extra qualification ‘DepthFilter::’ on member ‘computeTau’ [-fpermissive]
+  float DepthFilter::computeTau(Eigen::Matrix4f T, Eigen::Vector3f p);
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:47: error: ‘z’ was not declared in this scope
+   float tau_inv  =  0.5 * (1.0/max(0.0000001, z-tau) - 1.0/(z+tau));
+                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:52: error: ‘max’ was not declared in this scope
+   float tau_inv  =  0.5 * (1.0/max(0.0000001, z-tau) - 1.0/(z+tau));
+                                                    ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:52: note: suggested alternatives:
+In file included from /usr/include/c++/4.8/algorithm:62:0,
+                 from /usr/local/include/opencv2/hal/defs.h:570,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/c++/4.8/bits/stl_algo.h:4236:5: note:   ‘std::max’
+     max(initializer_list<_Tp> __l, _Compare __comp)
+     ^
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/local/include/opencv2/core.hpp:1332:17: note:   ‘cv::max’
+ CV_EXPORTS void max(const UMat& src1, const UMat& src2, UMat& dst);
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:104:34: error: ‘z_max’ was not declared in this scope
+   float C2 = filter(1)/(num_obs*(z_max-z_min));
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:104:40: error: ‘z_min’ was not declared in this scope
+   float C2 = filter(1)/(num_obs*(z_max-z_min));
+                                        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

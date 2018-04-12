@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘Eigen::Matrix<float, 2, -1> DepthFilter::epipolarLineSearch(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat, Eigen::VectorXf&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:136:3: error: ‘features_tracked’ was not declared in this scope
+   features_tracked = 0;
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:153:76: error: ‘epipolar_match’ was not declared in this scope
+     curr_pixel_coord.col(i) = epipolar_match(p_h, F, curr, ref_patch, match);
+                                                                            ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

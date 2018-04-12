@@ -1,0 +1,27 @@
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp: In function ‘Eigen::VectorXf warpedValues(cv::Mat, Eigen::MatrixXf, Eigen::VectorXf)’:
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:198:2: error: ‘Mat’ was not declared in this scope
+  Mat mapx = Mat(img.rows,img.cols, CV_32F, cvScalar(0.));
+  ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:198:2: note: suggested alternative:
+In file included from /usr/local/include/opencv2/core.hpp:59:0,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/local/include/opencv2/core/mat.hpp:730:18: note:   ‘cv::Mat’
+ class CV_EXPORTS Mat
+                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:198:6: error: expected ‘;’ before ‘mapx’
+  Mat mapx = Mat(img.rows,img.cols, CV_32F, cvScalar(0.));
+      ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:199:6: error: expected ‘;’ before ‘mapy’
+  Mat mapy = Mat(img.rows,img.cols, CV_32F, cvScalar(0.));
+      ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:233:9: error: ‘newVals’ was not declared in this scope
+  return newVals;
+         ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:234:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/ImageProcessing.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,21 @@
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:3:55: error: return type specification for constructor invalid
+ void FeatureDetector::FeatureDetector(int max_features) {
+                                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:3:6: error: prototype for ‘FeatureDetector::FeatureDetector(int)’ does not match any in class ‘FeatureDetector’
+ void FeatureDetector::FeatureDetector(int max_features) {
+      ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:8:7: error: candidates are: FeatureDetector::FeatureDetector(FeatureDetector&&)
+ class FeatureDetector {
+       ^
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:8:7: error:                 FeatureDetector::FeatureDetector(const FeatureDetector&)
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/FeatureDetector.h:12:2: error:                 FeatureDetector::FeatureDetector()
+  FeatureDetector();
+  ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp: In member function ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:9:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<pyr.size(); i++) {
+                           ^
+make[2]: *** [CMakeFiles/tracking.dir/src/FeatureDetector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

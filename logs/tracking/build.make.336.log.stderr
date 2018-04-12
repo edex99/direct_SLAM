@@ -1,0 +1,38 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize(Eigen::Matrix<float, 8, 1>, cv::Mat, cv::Mat, cv::Mat, cv::Mat, cv::Mat, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:129:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> directTransformationEstimation(std::vector<cv::Mat>, std::vector<cv::Mat>, std::vector<cv::Mat>, cv::Mat&, Eigen::Matrix<float, 8, 1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:235:7: error: ‘Mat’ was not declared in this scope
+       Mat A(20, 20, CV_32FC1);
+       ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:235:7: note: suggested alternative:
+In file included from /usr/local/include/opencv2/core.hpp:59:0,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/local/include/opencv2/core/mat.hpp:730:18: note:   ‘cv::Mat’
+ class CV_EXPORTS Mat
+                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:235:11: error: expected ‘;’ before ‘A’
+       Mat A(20, 20, CV_32FC1);
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:236:17: error: ‘A’ was not declared in this scope
+       cv::randn(A, 0.0f, 1.0f); // random data
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:239:103: error: expected primary-expression before ‘float’
+       Eigen::Map<Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor>> A_Eigen(A.ptr<float>(), A.rows, A.cols);
+                                                                                                       ^
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

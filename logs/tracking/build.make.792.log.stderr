@@ -1,0 +1,26 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::initializeFilter(cv::Mat, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:79:12: warning: unused variable ‘depth_uint16’ [-Wunused-variable]
+   uint16_t depth_uint16 = depth.at<uint16_t>(pixel_coord(1,i),pixel_coord(0,i));
+            ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:171:47: error: ‘p’ was not declared in this scope
+   << " " << u_new << " " << var_new << " " << p << " " << q << " " << w << " " << temp << " " << a_new << " " << b_new << std::endl; 
+                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:171:59: error: ‘q’ was not declared in this scope
+   << " " << u_new << " " << var_new << " " << p << " " << q << " " << w << " " << temp << " " << a_new << " " << b_new << std::endl; 
+                                                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:171:71: error: ‘w’ was not declared in this scope
+   << " " << u_new << " " << var_new << " " << p << " " << q << " " << w << " " << temp << " " << a_new << " " << b_new << std::endl; 
+                                                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:171:83: error: ‘temp’ was not declared in this scope
+   << " " << u_new << " " << var_new << " " << p << " " << q << " " << w << " " << temp << " " << a_new << " " << b_new << std::endl; 
+                                                                                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:171:98: error: ‘a_new’ was not declared in this scope
+   << " " << u_new << " " << var_new << " " << p << " " << q << " " << w << " " << temp << " " << a_new << " " << b_new << std::endl; 
+                                                                                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:171:114: error: ‘b_new’ was not declared in this scope
+   << " " << u_new << " " << var_new << " " << p << " " << q << " " << w << " " << temp << " " << a_new << " " << b_new << std::endl; 
+                                                                                                                  ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

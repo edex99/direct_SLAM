@@ -1,0 +1,43 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘float computeTau(Eigen::Matrix4f, Eigen::Vector3f, float)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:32:2: error: ‘Vector3d’ was not declared in this scope
+  Vector3d t(T_ref_cur.translation());
+  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:32:2: note: suggested alternative:
+In file included from /usr/include/eigen3/Eigen/Core:294:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:374:34: note:   ‘Eigen::Vector3d’
+ typedef Matrix<Type, Size, 1>    Vector##SizeSuffix##TypeSuffix;  \
+                                  ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:386:1: note: in expansion of macro ‘EIGEN_MAKE_TYPEDEFS’
+ EIGEN_MAKE_TYPEDEFS(Type, TypeSuffix, 3, 3) \
+ ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:395:1: note: in expansion of macro ‘EIGEN_MAKE_TYPEDEFS_ALL_SIZES’
+ EIGEN_MAKE_TYPEDEFS_ALL_SIZES(double,               d)
+ ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:32:11: error: expected ‘;’ before ‘t’
+  Vector3d t(T_ref_cur.translation());
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:33:11: error: expected ‘;’ before ‘a’
+  Vector3d a = p-t;
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:34:17: error: ‘t’ was not declared in this scope
+  float t_norm = t.norm();
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:35:17: error: ‘a’ was not declared in this scope
+  float a_norm = a.norm();
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:39:16: error: ‘PI’ was not declared in this scope
+  float gamma = PI-alpha-beta_plus; // triangle angles sum to PI
+                ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:40:48: error: ‘gamma_plus’ was not declared in this scope
+  float p_plus_norm = t_norm*sin(beta_plus)/sin(gamma_plus); // law of sines
+                                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:39:8: warning: unused variable ‘gamma’ [-Wunused-variable]
+  float gamma = PI-alpha-beta_plus; // triangle angles sum to PI
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

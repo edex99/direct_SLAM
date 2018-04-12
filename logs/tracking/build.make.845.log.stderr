@@ -1,0 +1,8 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘Eigen::Matrix<float, 3, -1> DepthFilter::triangulatePoints(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, Eigen::Matrix<float, 2, -1>, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:172:12: warning: unused variable ‘d’ [-Wunused-variable]
+   uint16_t d = curr_depth.at<uint16_t>(p2(1,i),p2(0,i));
+            ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::initializeFilter(cv::Mat, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:209:12: warning: unused variable ‘depth_uint16’ [-Wunused-variable]
+   uint16_t depth_uint16 = depth.at<uint16_t>(pixel_coord(1,i),pixel_coord(0,i));
+            ^

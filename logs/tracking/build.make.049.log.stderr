@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:111:7: error: expected ‘;’ before ‘cv’
+       cv::Mat curr_block = curr(cv::Rect(u-SSD_size/2,v-SSD_size/2,SSD_size,SSD_size));
+       ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:112:34: error: ‘curr_block’ was not declared in this scope
+       cv::Mat diff = ref_patch - curr_block;
+                                  ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

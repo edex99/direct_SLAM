@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, Eigen::Matrix3f, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:110:13: error: redeclaration of ‘float ssd’
+       float ssd = sum_num/(sum_denom1*sum_denom2);
+             ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:103:13: error: ‘float ssd’ previously declared here
+       float ssd = norm(diff, cv::NORM_L2);
+             ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

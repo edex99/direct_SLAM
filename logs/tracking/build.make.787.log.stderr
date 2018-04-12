@@ -1,0 +1,4 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::initializeFilter(cv::Mat, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:79:12: warning: unused variable ‘depth_uint16’ [-Wunused-variable]
+   uint16_t depth_uint16 = depth.at<uint16_t>(pixel_coord(1,i),pixel_coord(0,i));
+            ^

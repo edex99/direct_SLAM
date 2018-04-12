@@ -1,0 +1,10 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘float computeTau(Eigen::Matrix4f, Eigen::Vector3f)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:40:48: error: ‘gamma_plus’ was not declared in this scope
+  float p_plus_norm = t_norm*sin(beta_plus)/sin(gamma_plus); // law of sines
+                                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:39:8: warning: unused variable ‘gamma’ [-Wunused-variable]
+  float gamma = 3.14-alpha-beta_plus; // triangle angles sum to PI
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

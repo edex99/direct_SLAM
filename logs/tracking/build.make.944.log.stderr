@@ -1,0 +1,44 @@
+/home/dexheimere/thesis_ws/src/tracking/src/main.cpp:26:19: fatal error: DBoW2.h: No such file or directory
+ #include "DBoW2.h"
+                   ^
+compilation terminated.
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In member function ‘Eigen::Matrix<float, 8, 1> ImageAlignment::optimize(Eigen::Matrix<float, 8, 1>, cv::Mat&, cv::Mat&, cv::Mat&, cv::Mat&, cv::Mat&, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:178:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In member function ‘Eigen::Matrix<float, 8, 1> ImageAlignment::optimize2(Eigen::Matrix<float, 8, 1>, cv::Mat&, int)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:275:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp: In member function ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:14:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<pyr.size(); i++) {
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:40:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i=0; i<keypoints.size();i++) {
+                                  ^
+make[2]: *** [CMakeFiles/tracking.dir/src/main.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PointCloudMap.cpp:10:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/PointCloudMap.cpp: In member function ‘void PointCloudMap::updateMap()’:
+/home/dexheimere/thesis_ws/src/tracking/src/PointCloudMap.cpp:74:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int id = 0; id < pointCloudLocationInMap.size(); ++id)
+                                                     ^
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

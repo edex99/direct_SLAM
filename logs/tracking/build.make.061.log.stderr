@@ -1,0 +1,20 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In member function ‘Eigen::Matrix<float, 2, -1> PixelSelector::epipolar_line_search(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:134:3: error: ‘s’ was not declared in this scope
+   s//td::cout << E << std::endl;
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:135:3: error: expected ‘;’ before ‘for’
+   for (int i=0; i<prev_pixel_coord.cols(); i++) {
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:135:17: error: ‘i’ was not declared in this scope
+   for (int i=0; i<prev_pixel_coord.cols(); i++) {
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:135:47: error: expected ‘;’ before ‘)’ token
+   for (int i=0; i<prev_pixel_coord.cols(); i++) {
+                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:149:1: error: expected ‘}’ at end of input
+ }
+ ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:149:1: warning: no return statement in function returning non-void [-Wreturn-type]
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

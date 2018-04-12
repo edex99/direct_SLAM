@@ -1,0 +1,19 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, Eigen::Matrix3f, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:108:11: error: ‘ssd’ was not declared in this scope
+       if (ssd < min_ssd) {
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:11: warning: unused variable ‘sum_num’ [-Wunused-variable]
+       int sum_num = (cv::sum(curr_block.mul(ref_patch)))[0];
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:105:11: warning: unused variable ‘sum_denom1’ [-Wunused-variable]
+       int sum_denom1 = cv::sum(curr_block.mul(curr_block))[0];
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:106:11: warning: unused variable ‘sum_denom2’ [-Wunused-variable]
+       int sum_denom2 = cv::sum(ref_patch.mul(ref_patch))[0];
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:135:11: error: ‘ssd’ was not declared in this scope
+       if (ssd < min_ssd) {
+           ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

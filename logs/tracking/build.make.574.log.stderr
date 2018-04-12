@@ -1,0 +1,4 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, Eigen::Matrix3f, cv::Mat, cv::Mat, bool&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:86:9: warning: variable ‘second_min_ssd’ set but not used [-Wunused-but-set-variable]
+   float second_min_ssd = 10000;
+         ^

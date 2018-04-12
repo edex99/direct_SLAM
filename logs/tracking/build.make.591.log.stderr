@@ -1,0 +1,147 @@
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:25:8: error: extra qualification ‘DepthFilter::’ on member ‘computeTau’ [-fpermissive]
+  float DepthFilter::computeTau(Eigen::Matrix4f T, Eigen::Vector3f p);
+        ^
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:27:37: error: template argument 3 is invalid
+  Eigen::Matrix<float,4,Eigen:Dynamic> filter;
+                                     ^
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:27:37: error: template argument 4 is invalid
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:27:37: error: template argument 6 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::initializeFilter(cv::Mat, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:56:9: error: request for member ‘resize’ in ‘((DepthFilter*)this)->DepthFilter::filter’, which is of non-class type ‘int’
+  filter.resize(4, size);
+         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:60:14: error: expression cannot be used as a function
+    filter(0,i) = 1;
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:61:14: error: expression cannot be used as a function
+    filter(1,i) = 0;
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:62:14: error: expression cannot be used as a function
+    filter(2,i) = depthScale/depth_uint16;
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:63:14: error: expression cannot be used as a function
+    filter(3,i) = depth_std_dev_factor/(4*filter(2,i)*filter(2,i));
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:63:52: error: expression cannot be used as a function
+    filter(3,i) = depth_std_dev_factor/(4*filter(2,i)*filter(2,i));
+                                                    ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:63:64: error: expression cannot be used as a function
+    filter(3,i) = depth_std_dev_factor/(4*filter(2,i)*filter(2,i));
+                                                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:66:14: error: expression cannot be used as a function
+    filter(0,i) = 0;
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:67:14: error: expression cannot be used as a function
+    filter(1,i) = 0;
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:68:14: error: expression cannot be used as a function
+    filter(2,i) = 1.0/10.0; // set mean to large number? or for indoor environment assume 10 meters?
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:69:14: error: expression cannot be used as a function
+    filter(3,i) = 1.0/(min_depth*min_depth*36); // need to figure this out, what is the minimum depth?  
+              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:87:25: error: request for member ‘cols’ in ‘((DepthFilter*)this)->DepthFilter::filter’, which is of non-class type ‘int’
+  for (int i=0; i<filter.cols(); i++) {
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:47: error: ‘z’ was not declared in this scope
+   float tau_inv  =  0.5 * (1.0/max(0.0000001, z-tau) - 1.0/(z+tau));
+                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:52: error: ‘max’ was not declared in this scope
+   float tau_inv  =  0.5 * (1.0/max(0.0000001, z-tau) - 1.0/(z+tau));
+                                                    ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:91:52: note: suggested alternatives:
+In file included from /usr/include/c++/4.8/algorithm:62:0,
+                 from /usr/local/include/opencv2/hal/defs.h:570,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/c++/4.8/bits/stl_algo.h:4236:5: note:   ‘std::max’
+     max(initializer_list<_Tp> __l, _Compare __comp)
+     ^
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/local/include/opencv2/core.hpp:1332:17: note:   ‘cv::max’
+ CV_EXPORTS void max(const UMat& src1, const UMat& src2, UMat& dst);
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:98:33: error: expression cannot be used as a function
+   float s2 = 1.0/(1.0/filter(3,i) + 1.0/(tau2));
+                                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:99:27: error: expression cannot be used as a function
+   float m = s2*(filter(2,i)/filter(3,i) + x/(tau2));
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:99:39: error: expression cannot be used as a function
+   float m = s2*(filter(2,i)/filter(3,i) + x/(tau2));
+                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:101:27: error: expression cannot be used as a function
+   int num_obs = filter(0,i)+filter(1,i);
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:101:39: error: expression cannot be used as a function
+   int num_obs = filter(0,i)+filter(1,i);
+                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:102:46: error: expression cannot be used as a function
+   float gaussian_scale = sqrt(tau2+filter(3,i));
+                                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:103:22: error: expression cannot be used as a function
+   float C1 = filter(0)/num_obs*normal_pdf(x,filter(2),gaussian_scale);
+                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:103:53: error: expression cannot be used as a function
+   float C1 = filter(0)/num_obs*normal_pdf(x,filter(2),gaussian_scale);
+                                                     ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:104:22: error: expression cannot be used as a function
+   float C2 = filter(1)/(num_obs*(z_max-z_min));
+                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:104:34: error: ‘z_max’ was not declared in this scope
+   float C2 = filter(1)/(num_obs*(z_max-z_min));
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:104:40: error: ‘z_min’ was not declared in this scope
+   float C2 = filter(1)/(num_obs*(z_max-z_min));
+                                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:106:37: error: expression cannot be used as a function
+   float u_new = C1*m + C2*filter(2,i);
+                                     ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:107:47: error: expression cannot be used as a function
+   float var_new = C1*(s2+m*m) + C2*(filter(3,i)+filter(2,i)*filter(2,i)) - u_new*u_new;
+                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:107:59: error: expression cannot be used as a function
+   float var_new = C1*(s2+m*m) + C2*(filter(3,i)+filter(2,i)*filter(2,i)) - u_new*u_new;
+                                                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:107:71: error: expression cannot be used as a function
+   float var_new = C1*(s2+m*m) + C2*(filter(3,i)+filter(2,i)*filter(2,i)) - u_new*u_new;
+                                                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:109:27: error: expression cannot be used as a function
+   float p = C1*(filter(0,i)+1.0f)*(filter(0,i)+2.0f)/((num_obs+1.0f)*(num_obs+2.0f));
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:109:46: error: expression cannot be used as a function
+   float p = C1*(filter(0,i)+1.0f)*(filter(0,i)+2.0f)/((num_obs+1.0f)*(num_obs+2.0f));
+                                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:110:26: error: expression cannot be used as a function
+   float q = C2*filter(0,i)*(filter(0,i)+1.0f)/((num_obs+1.0f)*(num_obs+2.0f));
+                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:110:39: error: expression cannot be used as a function
+   float q = C2*filter(0,i)*(filter(0,i)+1.0f)/((num_obs+1.0f)*(num_obs+2.0f));
+                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:113:50: error: expression cannot be used as a function
+   float temp = (num_obs+1.0f)/((C1+C2)*filter(0,i)+C1) -1.0f;
+                                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:117:11: error: expression cannot be used as a function
+   filter(0) = a_new;
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:118:11: error: expression cannot be used as a function
+   filter(1) = b_new;
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:119:11: error: expression cannot be used as a function
+   filter(2) = u_new;
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:120:11: error: expression cannot be used as a function
+   filter(3) = var_new;
+           ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

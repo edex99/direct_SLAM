@@ -1,0 +1,7 @@
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp: In member function ‘void FeatureDetector::detectFeatures(std::vector<cv::Mat>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:11:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i=0; i<pyr.size(); i++) {
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/FeatureDetector.cpp:18:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i=0; i<local_keypoints.size();i++) {
+                                        ^

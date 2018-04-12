@@ -1,0 +1,24 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘Eigen::Vector3f triangulatePoint(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Vector3f, Eigen::Vector3f)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:20:26: error: expected unqualified-id before ‘)’ token
+  return (out.leftCols(3).)transpose();
+                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:20:27: error: expected ‘;’ before ‘transpose’
+  return (out.leftCols(3).)transpose();
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:20:37: error: ‘transpose’ was not declared in this scope
+  return (out.leftCols(3).)transpose();
+                                     ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:20:37: note: suggested alternative:
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/local/include/opencv2/core.hpp:1573:19: note:   ‘cv::transpose’
+ CV_EXPORTS_W void transpose(InputArray src, OutputArray dst);
+                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:21:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

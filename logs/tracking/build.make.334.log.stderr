@@ -1,0 +1,42 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize(Eigen::Matrix<float, 8, 1>, cv::Mat, cv::Mat, cv::Mat, cv::Mat, cv::Mat, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:129:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> directTransformationEstimation(std::vector<cv::Mat>, std::vector<cv::Mat>, std::vector<cv::Mat>, cv::Mat&, Eigen::Matrix<float, 8, 1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:235:88: error: no matching function for call to ‘Eigen::Map<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::Map(short unsigned int*, int&, int&)’
+        A_Eigen(depthLocations.ptr<uint16_t>(), depthLocations.rows, depthLocations.cols);
+                                                                                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:235:88: note: candidates are:
+In file included from /usr/include/eigen3/Eigen/Core:305:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Map.h:164:12: note: Eigen::Map<MatrixType, MapOptions, StrideType>::Map(Eigen::Map<MatrixType, MapOptions, StrideType>::PointerArgType, Eigen::Map<MatrixType, MapOptions, StrideType>::Index, Eigen::Map<MatrixType, MapOptions, StrideType>::Index, const StrideType&) [with PlainObjectType = Eigen::Matrix<float, -1, -1, 1, -1, -1>; int MapOptions = 0; StrideType = Eigen::Stride<0, 0>; Eigen::Map<MatrixType, MapOptions, StrideType>::PointerArgType = float*; Eigen::Map<MatrixType, MapOptions, StrideType>::Index = long int]
+     inline Map(PointerArgType dataPtr, Index nbRows, Index nbCols, const StrideType& a_stride = StrideType())
+            ^
+/usr/include/eigen3/Eigen/src/Core/Map.h:164:12: note:   no known conversion for argument 1 from ‘short unsigned int*’ to ‘Eigen::Map<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PointerArgType {aka float*}’
+/usr/include/eigen3/Eigen/src/Core/Map.h:151:12: note: Eigen::Map<MatrixType, MapOptions, StrideType>::Map(Eigen::Map<MatrixType, MapOptions, StrideType>::PointerArgType, Eigen::Map<MatrixType, MapOptions, StrideType>::Index, const StrideType&) [with PlainObjectType = Eigen::Matrix<float, -1, -1, 1, -1, -1>; int MapOptions = 0; StrideType = Eigen::Stride<0, 0>; Eigen::Map<MatrixType, MapOptions, StrideType>::PointerArgType = float*; Eigen::Map<MatrixType, MapOptions, StrideType>::Index = long int]
+     inline Map(PointerArgType dataPtr, Index a_size, const StrideType& a_stride = StrideType())
+            ^
+/usr/include/eigen3/Eigen/src/Core/Map.h:151:12: note:   no known conversion for argument 1 from ‘short unsigned int*’ to ‘Eigen::Map<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PointerArgType {aka float*}’
+/usr/include/eigen3/Eigen/src/Core/Map.h:139:12: note: Eigen::Map<MatrixType, MapOptions, StrideType>::Map(Eigen::Map<MatrixType, MapOptions, StrideType>::PointerArgType, const StrideType&) [with PlainObjectType = Eigen::Matrix<float, -1, -1, 1, -1, -1>; int MapOptions = 0; StrideType = Eigen::Stride<0, 0>; Eigen::Map<MatrixType, MapOptions, StrideType>::PointerArgType = float*]
+     inline Map(PointerArgType dataPtr, const StrideType& a_stride = StrideType())
+            ^
+/usr/include/eigen3/Eigen/src/Core/Map.h:139:12: note:   candidate expects 2 arguments, 3 provided
+/usr/include/eigen3/Eigen/src/Core/Map.h:104:79: note: Eigen::Map<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::Map(const Eigen::Map<Eigen::Matrix<float, -1, -1, 1, -1, -1> >&)
+ template<typename PlainObjectType, int MapOptions, typename StrideType> class Map
+                                                                               ^
+/usr/include/eigen3/Eigen/src/Core/Map.h:104:79: note:   candidate expects 1 argument, 3 provided
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

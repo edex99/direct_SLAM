@@ -1,0 +1,8 @@
+prefix=/home/dexheimere/thesis_ws/devel/.private/tracking
+
+Name: tracking
+Description: Description of tracking
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/dexheimere/thesis_ws/devel/.private/tracking/lib 
+Requires: roscpp std_msgs

@@ -1,0 +1,22 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, Eigen::Matrix3f, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:60: error: invalid cast from type ‘cv::Scalar’ to type ‘float’
+       float ssd = (float) cv::sum(curr_block.mul(ref_patch))/((sqrt((float) cv::sum(curr_block.mul(curr_block))))*(sqrt( (float) cv::sum(ref_patch.mul(ref_patch)))));
+                                                            ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:111: error: invalid cast from type ‘cv::Scalar’ to type ‘float’
+       float ssd = (float) cv::sum(curr_block.mul(ref_patch))/((sqrt((float) cv::sum(curr_block.mul(curr_block))))*(sqrt( (float) cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:162: error: invalid cast from type ‘cv::Scalar’ to type ‘float’
+       float ssd = (float) cv::sum(curr_block.mul(ref_patch))/((sqrt((float) cv::sum(curr_block.mul(curr_block))))*(sqrt( (float) cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                                                                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:60: error: invalid cast from type ‘cv::Scalar’ to type ‘float’
+       float ssd = (float) cv::sum(curr_block.mul(ref_patch))/((sqrt((float) cv::sum(curr_block.mul(curr_block))))*(sqrt( (float) cv::sum(ref_patch.mul(ref_patch)))));
+                                                            ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:111: error: invalid cast from type ‘cv::Scalar’ to type ‘float’
+       float ssd = (float) cv::sum(curr_block.mul(ref_patch))/((sqrt((float) cv::sum(curr_block.mul(curr_block))))*(sqrt( (float) cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:162: error: invalid cast from type ‘cv::Scalar’ to type ‘float’
+       float ssd = (float) cv::sum(curr_block.mul(ref_patch))/((sqrt((float) cv::sum(curr_block.mul(curr_block))))*(sqrt( (float) cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                                                                                  ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

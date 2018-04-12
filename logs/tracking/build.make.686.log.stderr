@@ -1,0 +1,17 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::initializeFilter(cv::Mat, Eigen::Matrix<float, 2, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:76:11: error: ‘make_shared’ is not a member of ‘boost’
+  filter = boost::make_shared<Eigen::Matrix<float,3,Eigen::Dynamic>(filter_init);
+           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:76:11: note: suggested alternative:
+In file included from /usr/include/c++/4.8/memory:82:0,
+                 from /usr/include/boost/config/no_tr1/memory.hpp:21,
+                 from /usr/include/boost/smart_ptr/shared_ptr.hpp:27,
+                 from /usr/include/boost/shared_ptr.hpp:17,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:8,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/c++/4.8/bits/shared_ptr.h:610:5: note:   ‘std::make_shared’
+     make_shared(_Args&&... __args)
+     ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,192 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In function ‘Eigen::Vector2f epipolar_match(Eigen::Vector3f, Eigen::Matrix3f, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:96: error: no matching function for call to ‘sqrt(cv::Scalar)’
+       float ssd = cv::sum(curr_block.mul(ref_patch))/((sqrt(cv::sum(curr_block.mul(curr_block))))*(sqrt(cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:96: note: candidates are:
+In file included from /usr/include/features.h:374:0,
+                 from /usr/include/limits.h:25,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:168,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:34,
+                 from /usr/local/include/opencv2/hal/defs.h:52,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note: double sqrt(double)
+ extern double __REDIRECT_NTH (sqrt, (double), __sqrt_finite);
+               ^
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘double’
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/local/include/opencv2/core.hpp:1343:19: note: void cv::sqrt(cv::InputArray, cv::OutputArray)
+ CV_EXPORTS_W void sqrt(InputArray src, OutputArray dst);
+                   ^
+/usr/local/include/opencv2/core.hpp:1343:19: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/include/opencv2/hal/defs.h:329:0,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/c++/4.8/cmath:482:3: note: constexpr float std::sqrt(float)
+   sqrt(float __x)
+   ^
+/usr/include/c++/4.8/cmath:482:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘float’
+/usr/include/c++/4.8/cmath:486:3: note: constexpr long double std::sqrt(long double)
+   sqrt(long double __x)
+   ^
+/usr/include/c++/4.8/cmath:486:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘long double’
+/usr/include/c++/4.8/cmath:494:5: note: template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp)
+     sqrt(_Tp __x)
+     ^
+/usr/include/c++/4.8/cmath:494:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/cmath: In substitution of ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp) [with _Tp = cv::Scalar_<double>]’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:96:   required from here
+/usr/include/c++/4.8/cmath:494:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__enable_if<false, double>’
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:138: error: no matching function for call to ‘sqrt(cv::Scalar)’
+       float ssd = cv::sum(curr_block.mul(ref_patch))/((sqrt(cv::sum(curr_block.mul(curr_block))))*(sqrt(cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                                                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:138: note: candidates are:
+In file included from /usr/include/features.h:374:0,
+                 from /usr/include/limits.h:25,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:168,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:34,
+                 from /usr/local/include/opencv2/hal/defs.h:52,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note: double sqrt(double)
+ extern double __REDIRECT_NTH (sqrt, (double), __sqrt_finite);
+               ^
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘double’
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/local/include/opencv2/core.hpp:1343:19: note: void cv::sqrt(cv::InputArray, cv::OutputArray)
+ CV_EXPORTS_W void sqrt(InputArray src, OutputArray dst);
+                   ^
+/usr/local/include/opencv2/core.hpp:1343:19: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/include/opencv2/hal/defs.h:329:0,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/c++/4.8/cmath:482:3: note: constexpr float std::sqrt(float)
+   sqrt(float __x)
+   ^
+/usr/include/c++/4.8/cmath:482:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘float’
+/usr/include/c++/4.8/cmath:486:3: note: constexpr long double std::sqrt(long double)
+   sqrt(long double __x)
+   ^
+/usr/include/c++/4.8/cmath:486:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘long double’
+/usr/include/c++/4.8/cmath:494:5: note: template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp)
+     sqrt(_Tp __x)
+     ^
+/usr/include/c++/4.8/cmath:494:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/cmath: In substitution of ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp) [with _Tp = cv::Scalar_<double>]’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:104:138:   required from here
+/usr/include/c++/4.8/cmath:494:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__enable_if<false, double>’
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:96: error: no matching function for call to ‘sqrt(cv::Scalar)’
+       float ssd = cv::sum(curr_block.mul(ref_patch))/((sqrt(cv::sum(curr_block.mul(curr_block))))*(sqrt(cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:96: note: candidates are:
+In file included from /usr/include/features.h:374:0,
+                 from /usr/include/limits.h:25,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:168,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:34,
+                 from /usr/local/include/opencv2/hal/defs.h:52,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note: double sqrt(double)
+ extern double __REDIRECT_NTH (sqrt, (double), __sqrt_finite);
+               ^
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘double’
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/local/include/opencv2/core.hpp:1343:19: note: void cv::sqrt(cv::InputArray, cv::OutputArray)
+ CV_EXPORTS_W void sqrt(InputArray src, OutputArray dst);
+                   ^
+/usr/local/include/opencv2/core.hpp:1343:19: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/include/opencv2/hal/defs.h:329:0,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/c++/4.8/cmath:482:3: note: constexpr float std::sqrt(float)
+   sqrt(float __x)
+   ^
+/usr/include/c++/4.8/cmath:482:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘float’
+/usr/include/c++/4.8/cmath:486:3: note: constexpr long double std::sqrt(long double)
+   sqrt(long double __x)
+   ^
+/usr/include/c++/4.8/cmath:486:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘long double’
+/usr/include/c++/4.8/cmath:494:5: note: template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp)
+     sqrt(_Tp __x)
+     ^
+/usr/include/c++/4.8/cmath:494:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/cmath: In substitution of ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp) [with _Tp = cv::Scalar_<double>]’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:96:   required from here
+/usr/include/c++/4.8/cmath:494:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__enable_if<false, double>’
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:138: error: no matching function for call to ‘sqrt(cv::Scalar)’
+       float ssd = cv::sum(curr_block.mul(ref_patch))/((sqrt(cv::sum(curr_block.mul(curr_block))))*(sqrt(cv::sum(ref_patch.mul(ref_patch)))));
+                                                                                                                                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:138: note: candidates are:
+In file included from /usr/include/features.h:374:0,
+                 from /usr/include/limits.h:25,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:168,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:34,
+                 from /usr/local/include/opencv2/hal/defs.h:52,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note: double sqrt(double)
+ extern double __REDIRECT_NTH (sqrt, (double), __sqrt_finite);
+               ^
+/usr/include/x86_64-linux-gnu/bits/math-finite.h:415:15: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘double’
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/local/include/opencv2/core.hpp:1343:19: note: void cv::sqrt(cv::InputArray, cv::OutputArray)
+ CV_EXPORTS_W void sqrt(InputArray src, OutputArray dst);
+                   ^
+/usr/local/include/opencv2/core.hpp:1343:19: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/include/opencv2/hal/defs.h:329:0,
+                 from /usr/local/include/opencv2/core/cvdef.h:59,
+                 from /usr/local/include/opencv2/core.hpp:52,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PixelSelector.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:1:
+/usr/include/c++/4.8/cmath:482:3: note: constexpr float std::sqrt(float)
+   sqrt(float __x)
+   ^
+/usr/include/c++/4.8/cmath:482:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘float’
+/usr/include/c++/4.8/cmath:486:3: note: constexpr long double std::sqrt(long double)
+   sqrt(long double __x)
+   ^
+/usr/include/c++/4.8/cmath:486:3: note:   no known conversion for argument 1 from ‘cv::Scalar’ to ‘long double’
+/usr/include/c++/4.8/cmath:494:5: note: template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp)
+     sqrt(_Tp __x)
+     ^
+/usr/include/c++/4.8/cmath:494:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/cmath: In substitution of ‘template<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp) [with _Tp = cv::Scalar_<double>]’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:132:138:   required from here
+/usr/include/c++/4.8/cmath:494:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__enable_if<false, double>’
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

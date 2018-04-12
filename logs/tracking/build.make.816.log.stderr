@@ -1,0 +1,23 @@
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:36:47: error: expected ‘;’ at end of member declaration
+   cv::Mat curr, cv::Mat ref_patch, bool& match)
+                                               ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/main.cpp:20:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/main.cpp:23:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h: At global scope:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:36:47: error: expected ‘;’ at end of member declaration
+   cv::Mat curr, cv::Mat ref_patch, bool& match)
+                                               ^
+make[2]: *** [CMakeFiles/tracking.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,56 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize(Eigen::Matrix<float, 8, 1>, cv::Mat&, cv::Mat&, cv::Mat&, cv::Mat&, cv::Mat&, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:123:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize2(Eigen::Matrix<float, 8, 1>, Eigen::VectorXf, cv::Mat&, cv::Mat&, cv::Mat&, Eigen::MatrixXf, Eigen::Matrix3f)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:230:77: error: ‘ref’ was not declared in this scope
+   pixel_coord_curr = project3Dpoints(transformedPts, K_multiplier,valid_pts,ref.rows,ref.cols);
+                                                                             ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:230:77: note: suggested alternatives:
+In file included from /usr/include/eigen3/Eigen/Core:153:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/c++/4.8/functional:493:5: note:   ‘std::ref’
+     ref(reference_wrapper<_Tp> __t) noexcept
+     ^
+In file included from /usr/include/boost/mpl/aux_/unwrap.hpp:18:0,
+                 from /usr/include/pcl-1.7/pcl/for_each_type.h:55,
+                 from /usr/include/pcl-1.7/pcl/conversions.h:52,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:47,
+                 from /usr/include/pcl-1.7/pcl/visualization/point_cloud_geometry_handlers.h:46,
+                 from /usr/include/pcl-1.7/pcl/visualization/point_cloud_handlers.h:41,
+                 from /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h:40,
+                 from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:47,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/boost/ref.hpp:64:63: note:   ‘boost::ref’
+ template<class T> inline reference_wrapper<T> BOOST_REF_CONST ref(T & t)
+                                                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:245:24: error: ‘J’ was not declared in this scope
+     J_new.row(count) = J.row(i);
+                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:294:9: error: ‘J’ was not declared in this scope
+   && ( (J.transpose()*e).lpNorm<Eigen::Infinity>() > .00000001) );
+         ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:294:50: error: expected primary-expression before ‘)’ token
+   && ( (J.transpose()*e).lpNorm<Eigen::Infinity>() > .00000001) );
+                                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:220:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

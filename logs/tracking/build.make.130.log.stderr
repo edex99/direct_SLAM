@@ -1,0 +1,40 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 6, 1> optimize(Eigen::Matrix<float, 6, 1>, cv::Mat, cv::Mat, cv::Mat, cv::Mat, cv::Mat, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:138:28: error: no match for ‘operator+’ (operand types are ‘const ScalarMultipleReturnType {aka const Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<float>, const Eigen::Matrix<float, -1, 1> >}’ and ‘int’)
+   warped_val = 1.2*ref_val + 3;
+                            ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:138:28: note: candidate is:
+In file included from /usr/include/eigen3/Eigen/Core:20:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/LieAlgebra.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:4,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:27:28: note: template<class OtherDerived> const Eigen::CwiseBinaryOp<Eigen::internal::scalar_sum_op<typename Eigen::internal::traits<T>::Scalar>, const Derived, const OtherDerived> Eigen::MatrixBase<Derived>::operator+(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = OtherDerived; Derived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<float>, const Eigen::Matrix<float, -1, 1> >]
+ EIGEN_MAKE_CWISE_BINARY_OP(operator+,internal::scalar_sum_op)
+                            ^
+/usr/include/eigen3/Eigen/src/Core/util/Macros.h:402:4: note: in definition of macro ‘EIGEN_MAKE_CWISE_BINARY_OP’
+   (METHOD)(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const \
+    ^
+/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:27:28: note:   template argument deduction/substitution failed:
+ EIGEN_MAKE_CWISE_BINARY_OP(operator+,internal::scalar_sum_op)
+                            ^
+/usr/include/eigen3/Eigen/src/Core/util/Macros.h:402:4: note: in definition of macro ‘EIGEN_MAKE_CWISE_BINARY_OP’
+   (METHOD)(const EIGEN_CURRENT_STORAGE_BASE_CLASS<OtherDerived> &other) const \
+    ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:138:30: note:   mismatched types ‘const Eigen::MatrixBase<Derived>’ and ‘int’
+   warped_val = 1.2*ref_val + 3;
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:127:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,36 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In member function ‘void ImageAlignment::setKeyframe(std::vector<cv::Mat>&, std::vector<cv::Mat>&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:32:13: error: ‘pyr_img_curr’ was not declared in this scope
+  for (int i=pyr_img_curr.size()-1; i>=0; i--) {
+             ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:33:17: error: ‘keyframe_images’ was not declared in this scope
+   cv::Mat ref = keyframe_images[i];
+                 ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:50:7: error: ‘keyframe_depths’ was not declared in this scope
+       keyframe_depths[i].convertTo(depthImage_8bit,CV_8UC1);
+       ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:71:23: error: ‘keyframe_depths’ was not declared in this scope
+   Pts = calc3DPoints2(keyframe_depths[i], pixel_coord, K_multiplier);
+                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:71:56: error: ‘K_multiplier’ was not declared in this scope
+   Pts = calc3DPoints2(keyframe_depths[i], pixel_coord, K_multiplier);
+                                                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In member function ‘Eigen::Matrix<float, 8, 1> ImageAlignment::optimize(Eigen::Matrix<float, 8, 1>, cv::Mat&, cv::Mat&, cv::Mat&, cv::Mat&, cv::Mat&, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat&)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:176:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In member function ‘Eigen::Matrix<float, 8, 1> ImageAlignment::optimize2(Eigen::Matrix<float, 8, 1>, cv::Mat&, int)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:273:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

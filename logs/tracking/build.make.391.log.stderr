@@ -1,0 +1,31 @@
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp: In function ‘Eigen::VectorXf warpedValues2(cv::Mat, Eigen::MatrixXf, Eigen::MatrixXf, Eigen::VectorXf)’:
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:245:13: error: ‘src’ was not declared in this scope
+  cv::remap( src, dst, map_x, map_y, INTER_LINEAR, BORDER_CONSTANT, cv::Scalar(0) );
+             ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:245:37: error: ‘INTER_LINEAR’ was not declared in this scope
+  cv::remap( src, dst, map_x, map_y, INTER_LINEAR, BORDER_CONSTANT, cv::Scalar(0) );
+                                     ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:245:37: note: suggested alternative:
+In file included from /home/dexheimere/opencv/include/opencv2/opencv.hpp:47:0,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/local/include/opencv2/imgproc.hpp:251:5: note:   ‘INTER_LINEAR’
+     INTER_LINEAR         = 1,
+     ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:245:51: error: ‘BORDER_CONSTANT’ was not declared in this scope
+  cv::remap( src, dst, map_x, map_y, INTER_LINEAR, BORDER_CONSTANT, cv::Scalar(0) );
+                                                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:245:51: note: suggested alternative:
+In file included from /usr/local/include/opencv2/core.hpp:54:0,
+                 from /home/dexheimere/opencv/include/opencv2/opencv.hpp:46,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:5,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:1:
+/usr/local/include/opencv2/core/base.hpp:234:5: note:   ‘BORDER_CONSTANT’
+     BORDER_CONSTANT    = 0, //!< `iiiiii|abcdefgh|iiiiiii`  with some specified `i`
+     ^
+/home/dexheimere/thesis_ws/src/tracking/src/ImageProcessing.cpp:246:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make[2]: *** [CMakeFiles/tracking.dir/src/ImageProcessing.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

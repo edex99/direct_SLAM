@@ -1,0 +1,20 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:133:39: error: prototype for ‘Eigen::Matrix<float, 2, -1> DepthFilter::epipolarLineSearch(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat, Eigen::VectorXi&)’ does not match any in class ‘DepthFilter’
+ Eigen::Matrix<float,2,Eigen::Dynamic> DepthFilter::epipolarLineSearch(Eigen::Matrix4f T, 
+                                       ^
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:41:40: error: candidate is: Eigen::Matrix<float, 2, -1> DepthFilter::epipolarLineSearch(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat, Eigen::VectorXf&)
+  Eigen::Matrix<float,2,Eigen::Dynamic> epipolarLineSearch(Eigen::Matrix4f T, 
+                                        ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In member function ‘void DepthFilter::updateFilter(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:231:25: error: no matching function for call to ‘DepthFilter::epipolarLineSearch(Eigen::Matrix4f&, Eigen::Matrix<float, 2, -1>&, cv::Mat&, cv::Mat&, Eigen::VectorXi&)’
+   p1, curr, ref, matched);
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:231:25: note: candidate is:
+In file included from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:0:
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:41:40: note: Eigen::Matrix<float, 2, -1> DepthFilter::epipolarLineSearch(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat, Eigen::VectorXf&)
+  Eigen::Matrix<float,2,Eigen::Dynamic> epipolarLineSearch(Eigen::Matrix4f T, 
+                                        ^
+/home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:41:40: note:   no known conversion for argument 5 from ‘Eigen::VectorXi {aka Eigen::Matrix<int, -1, 1>}’ to ‘Eigen::VectorXf& {aka Eigen::Matrix<float, -1, 1>&}’
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,4 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘void updateFilter(Eigen::Matrix<float, 4, -1>&, Eigen::Matrix4f, Eigen::Matrix<float, 3, -1>, Eigen::Matrix<float, 3, -1>)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:79:9: warning: unused variable ‘gaussian_scale’ [-Wunused-variable]
+   float gaussian_scale = sqrt(tau2+filter(3,i));
+         ^

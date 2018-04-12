@@ -1,0 +1,7 @@
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp: In member function ‘Eigen::Matrix<float, 2, -1> PixelSelector::epipolar_line_search(Eigen::Matrix4f, Eigen::Matrix<float, 2, -1>, cv::Mat, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/PixelSelector.cpp:129:33: error: ‘Zeros’ is not a member of ‘Eigen::Vector2f {aka Eigen::Matrix<float, 2, 1>}’
+       curr_pixel_coord.col(i) = Eigen::Vector2f::Zeros();
+                                 ^
+make[2]: *** [CMakeFiles/tracking.dir/src/PixelSelector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

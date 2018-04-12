@@ -1,0 +1,119 @@
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp: In function ‘Eigen::Vector3f triangulatePoint(Eigen::Matrix4f, Eigen::Matrix4f, Eigen::Vector3f, Eigen::Vector3f)’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:25: error: type/value mismatch at argument 1 in template parameter list for ‘template<class _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols> class Eigen::Matrix’
+  Eigen::Matrix<3,4,float> temp;
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:25: error:   expected a type, got ‘3’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:25: error: type/value mismatch at argument 3 in template parameter list for ‘template<class _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols> class Eigen::Matrix’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:25: error:   expected a constant of type ‘int’, got ‘float’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:25: error: template argument 4 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:25: error: template argument 6 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:4:31: error: invalid type in declaration before ‘;’ token
+  Eigen::Matrix<3,4,float> temp;
+                               ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:5:7: error: request for member ‘leftRows’ in ‘temp’, which is of non-class type ‘int’
+  temp.leftRows(3) = Eigen::Matrix3f::Identity();
+       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:25: error: type/value mismatch at argument 1 in template parameter list for ‘template<class _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols> class Eigen::Matrix’
+  Eigen::Matrix<3,4,float> M1 = K*temp*T1;
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:25: error:   expected a type, got ‘3’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:25: error: type/value mismatch at argument 3 in template parameter list for ‘template<class _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols> class Eigen::Matrix’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:25: error:   expected a constant of type ‘int’, got ‘float’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:25: error: template argument 4 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:25: error: template argument 6 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:30: error: invalid type in declaration before ‘=’ token
+  Eigen::Matrix<3,4,float> M1 = K*temp*T1;
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:39: error: cannot convert ‘const Type {aka const Eigen::CoeffBasedProduct<Eigen::Matrix<float, 3, 3>, const Eigen::Matrix<float, 4, 4>&, 6>}’ to ‘int’ in initialization
+  Eigen::Matrix<3,4,float> M1 = K*temp*T1;
+                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:25: error: type/value mismatch at argument 1 in template parameter list for ‘template<class _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols> class Eigen::Matrix’
+  Eigen::Matrix<3,4,float> M2 = K*temp*T2;
+                         ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:25: error:   expected a type, got ‘3’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:25: error: type/value mismatch at argument 3 in template parameter list for ‘template<class _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols> class Eigen::Matrix’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:25: error:   expected a constant of type ‘int’, got ‘float’
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:25: error: template argument 4 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:25: error: template argument 6 is invalid
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:30: error: invalid type in declaration before ‘=’ token
+  Eigen::Matrix<3,4,float> M2 = K*temp*T2;
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:7:39: error: cannot convert ‘const Type {aka const Eigen::CoeffBasedProduct<Eigen::Matrix<float, 3, 3>, const Eigen::Matrix<float, 4, 4>&, 6>}’ to ‘int’ in initialization
+  Eigen::Matrix<3,4,float> M2 = K*temp*T2;
+                                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:10:22: error: request for member ‘row’ in ‘M1’, which is of non-class type ‘int’
+  A.row(0) = p1(0)*M1.row(2) - M1.row(0);
+                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:10:34: error: request for member ‘row’ in ‘M1’, which is of non-class type ‘int’
+  A.row(0) = p1(0)*M1.row(2) - M1.row(0);
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:11:22: error: request for member ‘row’ in ‘M1’, which is of non-class type ‘int’
+  A.row(1) = p1(1)*M1.row(2) - M1.row(1);
+                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:11:34: error: request for member ‘row’ in ‘M1’, which is of non-class type ‘int’
+  A.row(1) = p1(1)*M1.row(2) - M1.row(1);
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:12:22: error: request for member ‘row’ in ‘M2’, which is of non-class type ‘int’
+  A.row(2) = p2(0)*M2.row(2) - M2.row(0);
+                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:12:34: error: request for member ‘row’ in ‘M2’, which is of non-class type ‘int’
+  A.row(2) = p2(0)*M2.row(2) - M2.row(0);
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:13:22: error: request for member ‘row’ in ‘M2’, which is of non-class type ‘int’
+  A.row(3) = p2(1)*M2.row(2) - M2.row(1);
+                      ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:13:34: error: request for member ‘row’ in ‘M2’, which is of non-class type ‘int’
+  A.row(3) = p2(1)*M2.row(2) - M2.row(1);
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:19: error: ‘MatrixXf’ was not declared in this scope
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                   ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:19: note: suggested alternative:
+In file included from /usr/include/eigen3/Eigen/Core:294:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:372:34: note:   ‘Eigen::MatrixXf’
+ typedef Matrix<Type, Size, Size> Matrix##SizeSuffix##TypeSuffix;  \
+                                  ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:388:1: note: in expansion of macro ‘EIGEN_MAKE_TYPEDEFS’
+ EIGEN_MAKE_TYPEDEFS(Type, TypeSuffix, Dynamic, X) \
+ ^
+/usr/include/eigen3/Eigen/src/Core/Matrix.h:394:1: note: in expansion of macro ‘EIGEN_MAKE_TYPEDEFS_ALL_SIZES’
+ EIGEN_MAKE_TYPEDEFS_ALL_SIZES(float,                f)
+ ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:27: error: template argument 1 is invalid
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                           ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:32: error: invalid type in declaration before ‘(’ token
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                                ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:15:34: error: cannot convert ‘Eigen::Matrix4f {aka Eigen::Matrix<float, 4, 4>}’ to ‘int’ in initialization
+  Eigen::JacobiSVD<MatrixXf> svd(A);
+                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:16:26: error: request for member ‘matrixV’ in ‘svd’, which is of non-class type ‘int’
+  Eigen::Matrix4f V = svd.matrixV();
+                          ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:16:18: warning: unused variable ‘V’ [-Wunused-variable]
+  Eigen::Matrix4f V = svd.matrixV();
+                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:18:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /usr/include/eigen3/Eigen/Core:254:0,
+                 from /usr/include/eigen3/Eigen/Dense:1,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/ImageProcessing.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/DepthFilter.h:6,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:1:
+/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h: In instantiation of ‘const typename Eigen::ProductReturnType<Derived, OtherDerived>::Type Eigen::MatrixBase<Derived>::operator*(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = Eigen::Matrix<float, 4, 4>; Derived = Eigen::CwiseUnaryOp<Eigen::internal::scalar_multiple_op<float>, const Eigen::Matrix<float, 3, 3> >; typename Eigen::ProductReturnType<Derived, OtherDerived>::Type = Eigen::CoeffBasedProduct<Eigen::Matrix<float, 3, 3>, const Eigen::Matrix<float, 4, 4>&, 6>]’:
+/home/dexheimere/thesis_ws/src/tracking/src/DepthFilter.cpp:6:39:   required from here
+/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:32:40: error: static assertion failed: INVALID_MATRIX_PRODUCT
+     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(X,#MSG);
+                                        ^
+/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:591:3: note: in expansion of macro ‘EIGEN_STATIC_ASSERT’
+   EIGEN_STATIC_ASSERT(ProductIsValid || SameSizes, INVALID_MATRIX_PRODUCT)
+   ^
+make[2]: *** [CMakeFiles/tracking.dir/src/DepthFilter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2

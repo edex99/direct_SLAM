@@ -1,0 +1,94 @@
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/main.cpp:20:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+In file included from /usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:52:0,
+                 from /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:39,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:10,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h: In member function ‘bool pcl::visualization::AreaPickingEvent::getPointsIndices(std::vector<int>&) const’:
+/usr/include/pcl-1.7/pcl/visualization/area_picking_event.h:64:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+           if (nb_points_ == -1)
+                              ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp: In function ‘Eigen::Matrix<float, 8, 1> optimize(Eigen::Matrix<float, 8, 1>, cv::Mat, cv::Mat, cv::Mat, cv::Mat, cv::Mat, Eigen::MatrixXf, Eigen::Matrix3f, cv::Mat)’:
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:89:2: error: expected ‘;’ before ‘Eigen’
+  Eigen::VectorXf warped_val, ref_val, e;
+  ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:90:2: error: ‘ref_val’ was not declared in this scope
+  ref_val = refValues(ref, pixel_coord);
+  ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:119:3: error: ‘warped_val’ was not declared in this scope
+   warped_val = warpedValues(curr, pixel_coord_curr, valid_pts);
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:123:3: error: ‘e’ was not declared in this scope
+   e = warped_val-ref_val;
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:123:3: note: suggested alternatives:
+In file included from /usr/include/boost/math/special_functions/gamma.hpp:22:0,
+                 from /usr/include/boost/math/special_functions/detail/bessel_jy.hpp:14,
+                 from /usr/include/boost/math/special_functions/bessel.hpp:18,
+                 from /usr/include/boost/math/special_functions/airy.hpp:10,
+                 from /usr/include/boost/math/special_functions.hpp:15,
+                 from /usr/include/boost/random/generate_canonical.hpp:22,
+                 from /usr/include/boost/random.hpp:52,
+                 from /usr/include/pcl-1.7/pcl/filters/boost.h:49,
+                 from /usr/include/pcl-1.7/pcl/filters/voxel_grid.h:43,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:11,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::float_constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::double_constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::long_double_constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:182:23: error: ‘e’ was not declared in this scope
+   && ( (J.transpose()*e).lpNorm<Eigen::Infinity>() > .00000001) );
+                       ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:182:23: note: suggested alternatives:
+In file included from /usr/include/boost/math/special_functions/gamma.hpp:22:0,
+                 from /usr/include/boost/math/special_functions/detail/bessel_jy.hpp:14,
+                 from /usr/include/boost/math/special_functions/bessel.hpp:18,
+                 from /usr/include/boost/math/special_functions/airy.hpp:10,
+                 from /usr/include/boost/math/special_functions.hpp:15,
+                 from /usr/include/boost/random/generate_canonical.hpp:22,
+                 from /usr/include/boost/random.hpp:52,
+                 from /usr/include/pcl-1.7/pcl/filters/boost.h:49,
+                 from /usr/include/pcl-1.7/pcl/filters/voxel_grid.h:43,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/PointCloudMap.h:11,
+                 from /home/dexheimere/thesis_ws/src/tracking/include/tracking/SparseAlignment.h:13,
+                 from /home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:1:
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::float_constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::double_constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/usr/include/boost/math/constants/constants.hpp:297:3: note:   ‘boost::math::long_double_constants::e’
+   BOOST_DEFINE_MATH_CONSTANT(e, 2.718281828459045235360287471352662497e+00, "2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642742746639193e+00")
+   ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:182:50: error: expected primary-expression before ‘)’ token
+   && ( (J.transpose()*e).lpNorm<Eigen::Infinity>() > .00000001) );
+                                                  ^
+/home/dexheimere/thesis_ws/src/tracking/src/SparseAlignment.cpp:108:8: warning: unused variable ‘e_init_norm’ [-Wunused-variable]
+  float e_init_norm = 0;
+        ^
+make[2]: *** [CMakeFiles/tracking.dir/src/SparseAlignment.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/tracking.dir/all] Error 2
+make: *** [all] Error 2
